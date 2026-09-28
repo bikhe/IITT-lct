@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    image: lct2026-route-planner
+    ports:
+      - "${PORT:-8000}:8000"

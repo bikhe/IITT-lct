@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Node (собранный интерфейс frontend/dist хранится в репозитории, чтобы для запуска хватало Python)
+node_modules/
+*.tsbuildinfo
+
+# Результаты CLI: планы и отчёт бенчмарка
+out/
+
+# Исходные CSV организаторов: кладутся сюда для `python -m app.cli build-datasets`, в репозиторий не входят
+docs/Датасет/
+
+# Локальный кэш геокодера
+*.sqlite
+*.sqlite3
+*.db
+
+# Логи, окружение, редакторы, ОС
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

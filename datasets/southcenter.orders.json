@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "32840",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71266,
+      "lon": 37.65454,
+      "address": "Город Москва, проезд.3-й Павелецкий, д. 9",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "78540",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.71806,
+      "lon": 37.63618,
+      "address": "Город Москва, ул.Восточная, д. 2 к 2",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "66376",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71681,
+      "lon": 37.64712,
+      "address": "Город Москва, ул.Дубининская, д. 59 к 2",
+      "district": "GPON Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "23637",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6982,
+      "lon": 37.59001,
+      "address": "Город Москва, ул.Шверника, д. 18 к 2",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "97770",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.68367,
+      "lon": 37.60466,
+      "address": "Город Москва, ул.Нагорная, д. 44 к 2",
+      "district": "Котловка"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "55711",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.65315,
+      "lon": 37.60092,
+      "address": "Город Москва, ул.Херсонская, д. 18",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "76944",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.68366,
+      "lon": 37.56783,
+      "address": "Город Москва, пр-кт.60-летия Октября, д. 18 к 2",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "75881",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.69864,
+      "lon": 37.55707,
+      "address": "Город Москва, ул.Дмитрия Ульянова, д. 27",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "85188",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.7217,
+      "lon": 37.56352,
+      "address": "Город Москва, ул.Усачёва, д. 29 к 1",
+      "district": "Хамовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заказ подключения/Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "19376",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6869,
+      "lon": 37.58832,
+      "address": "Город Москва, ул.Винокурова, д. 12 к 4",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "6185",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.65605,
+      "lon": 37.58515,
+      "address": "Город Москва, пр-кт.Балаклавский, д. 20 к 4",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "80548",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68031,
+      "lon": 37.66646,
+      "address": "Город Москва, ул.Садовники, д. 10 к 1",
+      "district": "Нагатино - Садовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "76452",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.6464,
+      "lon": 37.59563,
+      "address": "Город Москва, ул.Каховка, д. 7 к 1",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "47560",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.73314,
+      "lon": 37.64612,
+      "address": "Город Москва, ул.Большая Пионерская, д. 33 к 2",
+      "district": "Замоскворечье"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "79707",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.73209,
+      "lon": 37.56204,
+      "address": "Город Москва, ул.Плющиха, д. 42",
+      "district": "Хамовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "23142",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.6901,
+      "lon": 37.7092,
+      "address": "Город Москва, ул.Судостроительная, д. 31 к 3",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "10776",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.67316,
+      "lon": 37.70812,
+      "address": "Город Москва, ул.Судостроительная, д. 36",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "94447",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6728,
+      "lon": 37.70387,
+      "address": "Город Москва, ул.Затонная, д. 11 к 3",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заказ подключения/Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "94575",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.705,
+      "lon": 37.66055,
+      "address": "Город Москва, ул.Автозаводская, д. 11",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "94431",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68596,
+      "lon": 37.56985,
+      "address": "Город Москва, ул.Шверника, д. 12/2 к 3",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "52576",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68958,
+      "lon": 37.6926,
+      "address": "Город Москва, ул.Судостроительная, д. 27 к 2",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заявка на подключение",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "66315",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68678,
+      "lon": 37.56315,
+      "address": "Город Москва, ул.Шверника, д. 3",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "93544",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.65605,
+      "lon": 37.59044,
+      "address": "Город Москва, б-р.Черноморский, д. 19 к 2",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "19203",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.65747,
+      "lon": 37.60319,
+      "address": "Город Москва, ул.Керченская, д. 6 к 2",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "16024",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.67971,
+      "lon": 37.69941,
+      "address": "Город Москва, б-р.Кленовый, д. 10 к 1",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заявка на подключение",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "90373",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68058,
+      "lon": 37.68288,
+      "address": "Город Москва, ул.Коломенская, д. 5",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "79719",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.73946,
+      "lon": 37.56694,
+      "address": "Город Москва, б-р.Смоленский, д. 17 стр. 1",
+      "district": "Хамовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заказ подключения/Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "6957",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": "bike",
+    "location": {
+      "lat": 55.73094,
+      "lon": 37.58108,
+      "address": "Город Москва, ул.Усачёва, д. 25",
+      "district": "Хамовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "78036",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 20,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.68896,
+      "lon": 37.5778,
+      "address": "Город Москва, пр-кт.60-летия Октября, д. 17",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "49105",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 20,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68583,
+      "lon": 37.6168,
+      "address": "Город Москва, ул.Ремизова, д. 15 к 2",
+      "district": "Котловка"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Заказ подключения/Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "27023",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.69062,
+      "lon": 37.57629,
+      "address": "Город Москва, ул.Шверника, д. 5 к 2",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "26177",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.67284,
+      "lon": 37.65012,
+      "address": "Город Москва, ул.Академика Миллионщикова, д. 13 к 1",
+      "district": "Нагатино - Садовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "77795",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6814,
+      "lon": 37.56844,
+      "address": "Город Москва, ул.Винокурова, д. 5/6 к 2",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "TVE/ENT. Другие ошибки",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "24132",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.66474,
+      "lon": 37.57795,
+      "address": "Город Москва, пр-кт.Балаклавский, д. 50",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "99841",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.67037,
+      "lon": 37.61579,
+      "address": "Город Москва, б-р.Симферопольский, д. 27",
+      "district": "Нагорный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "20263",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6642,
+      "lon": 37.60798,
+      "address": "Город Москва, ул.Болотниковская, д. 9 к 2",
+      "district": "Нагорный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "51133",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71367,
+      "lon": 37.67063,
+      "address": "Город Москва, ул.Трофимова, д. 4А",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "90709",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6824,
+      "lon": 37.68324,
+      "address": "Город Москва, ул.Коломенская, д. 21",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Разрывы",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "84074",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.69193,
+      "lon": 37.69602,
+      "address": "Город Москва, наб.Нагатинская, д. 60 к 2",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "12263",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68057,
+      "lon": 37.65361,
+      "address": "Город Москва, проезд.Коломенский, д. 27 к 3",
+      "district": "Нагатино - Садовники"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "95501",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.69301,
+      "lon": 37.69217,
+      "address": "Город Москва, ул.Затонная, д. 12 к 1",
+      "district": "Нагатинский Затон"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "86002",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71072,
+      "lon": 37.63571,
+      "address": "Город Москва, ул.Городская, д. 9",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "92618",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.69629,
+      "lon": 37.58845,
+      "address": "Город Москва, пр-кт.Севастопольский, д. 9 к 1",
+      "district": "Донской"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "IP-адрес 169...",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "26845",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70376,
+      "lon": 37.65745,
+      "address": "Город Москва, проезд.3-й Павелецкий, д. 7 к 2",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Роутер. Замена техническим специалистом",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "80308",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": "foot",
+    "location": {
+      "lat": 55.73712,
+      "lon": 37.61537,
+      "address": "Город Москва, ул.Большая Серпуховская, д. 31 к 6",
+      "district": "Замоскворечье"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "IP-адрес 169...",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "93276",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71084,
+      "lon": 37.65029,
+      "address": "Город Москва, ул.2-я Рощинская, д. 11",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Разрывы",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "61311",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.69922,
+      "lon": 37.64348,
+      "address": "Город Москва, пер.Ослябинский, д. 3",
+      "district": "Даниловский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "ТВ. Замена приставки техником",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "46513",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68916,
+      "lon": 37.55671,
+      "address": "Город Москва, ул.Шверника, д. 14/1 к 2",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Рост ошибок на порту",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "35265",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68188,
+      "lon": 37.58338,
+      "address": "Город Москва, ул.Профсоюзная, д. 8 к 2",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Работа с кабелем",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "13203",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.67684,
+      "lon": 37.58594,
+      "address": "Город Москва, пр-кт.Нахимовский, д. 50",
+      "district": "Академический"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "ТВ. Замена приставки техником",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "26896",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.65627,
+      "lon": 37.5989,
+      "address": "Город Москва, б-р.Чонгарский, д. 22 к 2",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Переключение на Гбит/с",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "87819",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72752,
+      "lon": 37.62185,
+      "address": "Город Москва, ул.Люсиновская, д. 4",
+      "district": "Замоскворечье"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Переключение на Гбит/с",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "5406",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.68583,
+      "lon": 37.6168,
+      "address": "Город Москва, ул.Ремизова, д. 15 к 2",
+      "district": "Котловка"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Переключение на Гбит/с",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "86864",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6709,
+      "lon": 37.62123,
+      "address": "Город Москва, б-р.Чонгарский, д. 1 к 4",
+      "district": "Нагорный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Работа с кабелем",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "17896",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.65564,
+      "lon": 37.60679,
+      "address": "Город Москва, ул.Керченская, д. 10 к 2",
+      "district": "Зюзино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "IP-адрес 169...",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "18023",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.6996,
+      "lon": 37.55453,
+      "address": "г.Город Москва, пр-кт.Ленинский, д. 70/11",
+      "district": "Гагаринский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Информация",
+    "released_min": null,
+    "status": "unassigned"
+  }
+]

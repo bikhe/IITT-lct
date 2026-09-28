@@ -1,0 +1,272 @@
+[
+  {
+    "id": "eng_southcenter_01",
+    "name": "Бахарев Андрей",
+    "skills": [
+      "connection",
+      "local"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
+    },
+    "depot": {
+      "lat": 55.6643,
+      "lon": 37.6106,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_02",
+    "name": "Брюзгин Ярослав",
+    "skills": [
+      "local"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "11:00",
+      "end": "20:00",
+      "start_min": 660,
+      "end_min": 1200
+    },
+    "depot": {
+      "lat": 55.6673,
+      "lon": 37.6226,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_03",
+    "name": "Выговский Сергей",
+    "skills": [
+      "connection"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "13:00",
+      "end": "22:00",
+      "start_min": 780,
+      "end_min": 1320
+    },
+    "depot": {
+      "lat": 55.6703,
+      "lon": 37.6146,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_04",
+    "name": "Данилов Даниил",
+    "skills": [
+      "emergency",
+      "local"
+    ],
+    "transport": "transit",
+    "shift": {
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
+    },
+    "depot": {
+      "lat": 55.6733,
+      "lon": 37.6266,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_05",
+    "name": "Ионов Геннадий",
+    "skills": [
+      "local",
+      "connection",
+      "emergency"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "11:00",
+      "end": "20:00",
+      "start_min": 660,
+      "end_min": 1200
+    },
+    "depot": {
+      "lat": 55.6763,
+      "lon": 37.6186,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_06",
+    "name": "Исхаков Денис",
+    "skills": [
+      "connection",
+      "emergency"
+    ],
+    "transport": "foot",
+    "shift": {
+      "start": "13:00",
+      "end": "22:00",
+      "start_min": 780,
+      "end_min": 1320
+    },
+    "depot": {
+      "lat": 55.6643,
+      "lon": 37.6106,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_07",
+    "name": "Капитанчук Александр",
+    "skills": [
+      "local"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
+    },
+    "depot": {
+      "lat": 55.6673,
+      "lon": 37.6226,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_08",
+    "name": "Переладов Алексей",
+    "skills": [
+      "connection",
+      "local"
+    ],
+    "transport": "bike",
+    "shift": {
+      "start": "11:00",
+      "end": "20:00",
+      "start_min": 660,
+      "end_min": 1200
+    },
+    "depot": {
+      "lat": 55.6703,
+      "lon": 37.6146,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_09",
+    "name": "Прокопенко Вячеслав",
+    "skills": [
+      "local",
+      "connection",
+      "emergency"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "13:00",
+      "end": "22:00",
+      "start_min": 780,
+      "end_min": 1320
+    },
+    "depot": {
+      "lat": 55.6733,
+      "lon": 37.6266,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_10",
+    "name": "Рыбалкин Егор",
+    "skills": [
+      "local"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
+    },
+    "depot": {
+      "lat": 55.6763,
+      "lon": 37.6186,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_11",
+    "name": "Сакур Тимофей",
+    "skills": [
+      "connection"
+    ],
+    "transport": "transit",
+    "shift": {
+      "start": "11:00",
+      "end": "20:00",
+      "start_min": 660,
+      "end_min": 1200
+    },
+    "depot": {
+      "lat": 55.6643,
+      "lon": 37.6106,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_12",
+    "name": "Бригада Смирнов",
+    "skills": [
+      "emergency",
+      "local"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "13:00",
+      "end": "22:00",
+      "start_min": 780,
+      "end_min": 1320
+    },
+    "depot": {
+      "lat": 55.6673,
+      "lon": 37.6226,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  },
+  {
+    "id": "eng_southcenter_13",
+    "name": "Бригада Васильев",
+    "skills": [
+      "connection",
+      "local"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
+    },
+    "depot": {
+      "lat": 55.6703,
+      "lon": 37.6146,
+      "address": "г.Москва проезд Симферопольский, д.7",
+      "district": "southcenter"
+    }
+  }
+]

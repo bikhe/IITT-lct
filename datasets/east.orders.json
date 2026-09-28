@@ -1,0 +1,1982 @@
+[
+  {
+    "id": "74198",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70308,
+      "lon": 37.76303,
+      "address": "Город Москва, пр-кт.Волгоградский, д. 128 к 5",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "86160",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.74582,
+      "lon": 37.6527,
+      "address": "Город Москва, пер.Маяковского, д. 2",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "50104",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71896,
+      "lon": 37.72451,
+      "address": "Город Москва, ул.Грайвороновская, д. 10 к 2",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": null,
+      "gbit": true
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заявка на подключение",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "46393",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72904,
+      "lon": 37.76509,
+      "address": "Город Москва, ул.Михайлова, д. 14",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "10135",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71322,
+      "lon": 37.77229,
+      "address": "Город Москва, ул.3-я Институтская, д. 5 к 2",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "18754",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72378,
+      "lon": 37.7761,
+      "address": "Город Москва, ул.1-я Новокузьминская, д. 16 к 1",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "84627",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70694,
+      "lon": 37.75745,
+      "address": "Город Москва, ул.Окская, д. 32",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "61540",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7033,
+      "lon": 37.7599,
+      "address": "Город Москва, ул.Юных Ленинцев, д. 84",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "74949",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.74474,
+      "lon": 37.66998,
+      "address": "Город Москва, ул.Международная, д. 28 стр. 1",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "41077",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.75244,
+      "lon": 37.68106,
+      "address": "Город Москва, ул.Новорогожская, д. 8",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "87693",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71807,
+      "lon": 37.71662,
+      "address": "Город Москва, ул.Чистова, д. 12",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "93086",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71678,
+      "lon": 37.78795,
+      "address": "Город Москва, ул.Паперника, д. 19",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "57866",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71277,
+      "lon": 37.77452,
+      "address": "Город Москва, ул.Окская, д. 48/2",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "35675",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72264,
+      "lon": 37.69232,
+      "address": "Город Москва, ул.Трофимова, д. 24 к 2",
+      "district": "Южнопортовый"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "82388",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7242,
+      "lon": 37.68376,
+      "address": "Город Москва, ул.1-я Дубровская, д. 6",
+      "district": "Южнопортовый"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "23380",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.75011,
+      "lon": 37.67926,
+      "address": "Город Москва, ул.Рогожский Вал, д. 2/50",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "37272",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.74298,
+      "lon": 37.66648,
+      "address": "Город Москва, ул.Талалихина, д. 2/1 к 4",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "71388",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.71728,
+      "lon": 37.71932,
+      "address": "Город Москва, ул.Артюхиной, д. 20А",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "34366",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71517,
+      "lon": 37.73552,
+      "address": "Город Москва, ул.Малышева, д. 13",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "67554",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.74182,
+      "lon": 37.7232,
+      "address": "Город Москва, ул.Бронницкая, д. 12",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заявка на подключение",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "94409",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7635,
+      "lon": 37.71566,
+      "address": "Город Москва, ул.Авиамоторная, д. 14",
+      "district": "Лефортово"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "10245",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71743,
+      "lon": 37.75259,
+      "address": "Город Москва, ул.Фёдора Полетаева, д. 2 к 6",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "52405",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72105,
+      "lon": 37.79472,
+      "address": "Город Москва, ул.Зарайская, д. 51 к 2",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "30769",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72076,
+      "lon": 37.7365,
+      "address": "Город Москва, ул.Саратовская, д. 14/1",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "98182",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72607,
+      "lon": 37.71049,
+      "address": "Город Москва, ул.Нижегородская, д. 63",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заявка на подключение",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "76082",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72751,
+      "lon": 37.72306,
+      "address": "Город Москва, ул.Смирновская, д. 6",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": "FTTB",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Заказ подключения/Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "29890",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7345,
+      "lon": 37.70866,
+      "address": "Город Москва, ул.Нижегородская, д. 61",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "77563",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70457,
+      "lon": 37.75284,
+      "address": "Город Москва, ул.Зеленодольская, д. 28Б",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "53587",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71188,
+      "lon": 37.74089,
+      "address": "Город Москва, ул.Артюхиной, д. 16",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "82808",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71957,
+      "lon": 37.73562,
+      "address": "Город Москва, ул.3-я Карачаровская, д. 4 к 1",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "7939",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "connection",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 70,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7126,
+      "lon": 37.79209,
+      "address": "Город Москва, пр-кт.Рязанский, д. 73",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Подключение",
+    "hd_type": "Конвергенция абонента",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "92031",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 20,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7143,
+      "lon": 37.8384,
+      "address": "Город Москва, ул.Ферганская, д. 28/7",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "31260",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 20,
+    "required_transport": "car",
+    "location": {
+      "lat": 55.70072,
+      "lon": 37.81262,
+      "address": "Город Москва, б-р.Самаркандский Квартал 137а, д. к5",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "69967",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 20,
+    "required_transport": null,
+    "location": {
+      "lat": 55.75805,
+      "lon": 37.7126,
+      "address": "Город Москва, ул.Боровая, д. 14",
+      "district": "Лефортово"
+    },
+    "tech": {
+      "product": "FTTB",
+      "gbit": true
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Заказ подключения/Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "22634",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 20,
+    "required_transport": null,
+    "location": {
+      "lat": 55.73108,
+      "lon": 37.66116,
+      "address": "Город Москва, ул.Стройковская, д. 8",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "98815",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 20,
+    "required_transport": null,
+    "location": {
+      "lat": 55.76398,
+      "lon": 37.7152,
+      "address": "Город Москва, ул.2-я Синичкина, д. 9 к 1",
+      "district": "Лефортово"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "33527",
+    "skills": [
+      "connection"
+    ],
+    "priority": "normal",
+    "work_type": "addon",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 20,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72403,
+      "lon": 37.71802,
+      "address": "Москва, проезд Орехово-Зуевский, д. 18/8",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": "FMC",
+      "gbit": false
+    },
+    "bk_type": "Дозаказ",
+    "hd_type": "Дозаказ оборудования",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "21571",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7443,
+      "lon": 37.66368,
+      "address": "Город Москва, пер.Большой Рогожский, д. 10 к 2",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "47670",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.77407,
+      "lon": 37.68064,
+      "address": "Город Москва, ул.Машкова, д. 13 стр. 1",
+      "district": "Басманный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "17892",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70487,
+      "lon": 37.7428,
+      "address": "Город Москва, ул.11-я Текстильщиков, д. 10",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Переключение на Гбит/с",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "51115",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.72837,
+      "lon": 37.77297,
+      "address": "Город Москва, ул.Паперника, д. 18",
+      "district": "Рязанский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "76643",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.74898,
+      "lon": 37.66029,
+      "address": "Город Москва, ул.Большая Калитниковская, д. 38",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "43506",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70072,
+      "lon": 37.81262,
+      "address": "Город Москва, б-р.Самаркандский Квартал 137а, д. к5",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Переключение на Гбит/с",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "48174",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70205,
+      "lon": 37.77613,
+      "address": "Город Москва, ул.Маршала Чуйкова, д. 9 к 2",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Мониторинг",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "48227",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.739,
+      "lon": 37.65309,
+      "address": "Город Москва, ул.Талалихина, д. 16",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "60720",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71236,
+      "lon": 37.72526,
+      "address": "Город Москва, б-р.Волжский, д. 50 к 2",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "48238",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7169,
+      "lon": 37.71475,
+      "address": "Город Москва, ул.Артюхиной, д. 3",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Разрывы",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "41912",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70393,
+      "lon": 37.8173,
+      "address": "Город Москва, проезд.Ферганский, д. 7 к 5",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "4893",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.76459,
+      "lon": 37.65569,
+      "address": "Город Москва, ул.Земляной Вал, д. 24/30 стр. 1",
+      "district": "Басманный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "68476",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7308,
+      "lon": 37.71884,
+      "address": "Город Москва, ул.3-я Карачаровская, д. 8 к 2",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Разрывы",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "50219",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71885,
+      "lon": 37.72133,
+      "address": "Город Москва, ул.Чистопольская, д. 2 к 2",
+      "district": "Нижегородский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "76678",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.74768,
+      "lon": 37.70501,
+      "address": "Город Москва, ул.Боровая, д. 12",
+      "district": "Лефортово"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Работа с кабелем",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "47330",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.75884,
+      "lon": 37.6973,
+      "address": "Город Москва, ул.Красноказарменная, д. 9Б стр. 1",
+      "district": "Лефортово"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Роутер. Замена техническим специалистом",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "26645",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.75784,
+      "lon": 37.70422,
+      "address": "Город Москва, ул.Сторожевая, д. 31",
+      "district": "Лефортово"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "TVE/ENT. Другие ошибки",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "24076",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "12:00",
+      "end": "14:00",
+      "start_min": 720,
+      "end_min": 840
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.742,
+      "lon": 37.65097,
+      "address": "Город Москва, ул.Новорогожская, д. 10",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Роутер. Замена техническим специалистом",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "30243",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "18:00",
+      "end": "20:00",
+      "start_min": 1080,
+      "end_min": 1200
+    },
+    "duration_min": 30,
+    "required_transport": "foot",
+    "location": {
+      "lat": 55.73048,
+      "lon": 37.67498,
+      "address": "Город Москва, ул.Нижегородская, д. 25",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "TVE/ENT. Замена приставки техником",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "32807",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71006,
+      "lon": 37.77757,
+      "address": "Город Москва, ул.Окская, д. 6 к 1",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Работа с кабелем",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "73572",
+    "skills": [
+      "local"
+    ],
+    "priority": "normal",
+    "work_type": "local",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 30,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70997,
+      "lon": 37.75619,
+      "address": "Город Москва, пр-кт.Волгоградский, д. 97 к 1",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Локальная заявка",
+    "hd_type": "Нет линка",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "41962",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71005,
+      "lon": 37.8046,
+      "address": "г.Город Москва, б-р.Самаркандский, д. 32к1",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Информация",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "97886",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71855,
+      "lon": 37.83498,
+      "address": "г.Город Москва, б-р.Самаркандский, д. 10к2",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Информация",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "17349",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "14:00",
+      "end": "16:00",
+      "start_min": 840,
+      "end_min": 960
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.73881,
+      "lon": 37.67566,
+      "address": "г.Город Москва, ул.Новорогожская, д. 20",
+      "district": "Таганский"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Информация",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "54964",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71644,
+      "lon": 37.8182,
+      "address": "г.Город Москва, ул.Ташкентская, д. 16к2",
+      "district": "Выхино"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Информация",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "21367",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.71121,
+      "lon": 37.73736,
+      "address": "г.Город Москва, ул.Саратовская, д. 16",
+      "district": "Текстильщики"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Авария",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "24980",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "10:00",
+      "end": "12:00",
+      "start_min": 600,
+      "end_min": 720
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.75641,
+      "lon": 37.66394,
+      "address": "г.Город Москва, наб.Семеновская, д. 3/1к2",
+      "district": "Басманный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Авария",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "15648",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "16:00",
+      "end": "18:00",
+      "start_min": 960,
+      "end_min": 1080
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.7631,
+      "lon": 37.65314,
+      "address": "г.Город Москва, наб.Семеновская, д. 2/1",
+      "district": "Басманный"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Информация",
+    "released_min": null,
+    "status": "unassigned"
+  },
+  {
+    "id": "57299",
+    "skills": [
+      "emergency"
+    ],
+    "priority": "urgent",
+    "work_type": "emergency",
+    "window": {
+      "start": "20:00",
+      "end": "22:00",
+      "start_min": 1200,
+      "end_min": 1320
+    },
+    "duration_min": 80,
+    "required_transport": null,
+    "location": {
+      "lat": 55.70198,
+      "lon": 37.76677,
+      "address": "г.Город Москва, пр-кт.Волгоградский, д. 128к1",
+      "district": "Кузьминки"
+    },
+    "tech": {
+      "product": null,
+      "gbit": false
+    },
+    "bk_type": "Глобальная проблема",
+    "hd_type": "Авария",
+    "released_min": null,
+    "status": "unassigned"
+  }
+]

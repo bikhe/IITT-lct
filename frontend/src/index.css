@@ -1,0 +1,260 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+@import "@fontsource-variable/inter";
+
+/*
+ * Дизайн-токены. Светлая спокойная тема операционной панели: белые поверхности на
+ * холодном сером фоне, тонкие рамки, один фирменный акцент (жёлтый) только на главном действии.
+ * Цвет несёт одну из ролей: идентичность бригады, вид работ или статус (всегда с иконкой и подписью).
+ */
+@theme {
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /*
+   * Шкала текста — семь ступеней, других размеров в интерфейсе нет:
+   * micro — оси и счётчики, caption — вторичный текст, body — основной,
+   * title — заголовки блоков, heading — заголовок панели, metric — цифры KPI, hero — главные цифры сравнения.
+   */
+  --text-micro: 11px;
+  --text-micro--line-height: 14px;
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+  --text-body: 13px;
+  --text-body--line-height: 18px;
+  --text-title: 15px;
+  --text-title--line-height: 20px;
+  --text-heading: 18px;
+  --text-heading--line-height: 24px;
+  --text-metric: 22px;
+  --text-metric--line-height: 26px;
+  --text-hero: 32px;
+  --text-hero--line-height: 36px;
+
+  --color-canvas: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-sunken: #f7f8fa;
+  --color-hover: #f1f3f6;
+  --color-line: #e5e7eb;
+  --color-line-strong: #d1d5db;
+
+  --color-ink: #0f1115;
+  --color-ink-2: #454b57;
+  /* вторичный текст: контраст ≥ 4,5:1 и на белом, и на canvas */
+  --color-ink-3: #666d7a;
+  /* только декор (разделители, плейсхолдеры) — не для значимого текста */
+  --color-ink-4: #a6acb6;
+
+  --color-brand: #ffd200;
+  --color-brand-hover: #f5c800;
+  --color-brand-soft: #fff6cc;
+
+  --color-ok: #0f7a3a;
+  --color-ok-soft: #e7f5ec;
+  --color-bad: #c62f2f;
+  --color-bad-soft: #fdeceb;
+  --color-warn: #a35f00;
+  --color-warn-soft: #fff3df;
+  --color-info: #2361c7;
+  --color-info-soft: #e9f0fc;
+
+  --color-work-emergency: #d03b3b;
+  --color-work-connection: #2a78d6;
+  --color-work-local: #0e9f6e;
+  --color-work-addon: #7c3aed;
+
+  --shadow-card: 0 1px 2px rgba(15, 17, 21, 0.04), 0 1px 1px rgba(15, 17, 21, 0.03);
+  --shadow-pop: 0 12px 32px -8px rgba(15, 17, 21, 0.18), 0 2px 6px rgba(15, 17, 21, 0.06);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: default;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-info);
+    outline-offset: 1px;
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+/* ---------- Карта ---------- */
+
+/* Подложка OSM в оттенках серого: маршруты бригад читаются лучше цветной карты */
+.map-tiles {
+  filter: grayscale(1) contrast(0.92) brightness(1.04);
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #eceef1;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.leaflet-bar {
+  border: 1px solid var(--color-line) !important;
+  box-shadow: var(--shadow-card) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  color: var(--color-ink-2) !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+
+.leaflet-tooltip.map-tip {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-pop);
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: normal;
+  width: max-content;
+  max-width: 260px;
+}
+
+.leaflet-tooltip.map-tip::before {
+  display: none;
+}
+
+.map-pick .leaflet-container,
+.map-pick .leaflet-interactive {
+  cursor: crosshair !important;
+}
+
+.pin {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  font-weight: 650;
+  font-size: 11px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 2px #fff, 0 1px 4px rgba(15, 17, 21, 0.35);
+  transition: transform 120ms ease;
+}
+
+.pin:hover {
+  transform: scale(1.15);
+}
+
+.pin-selected {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--color-ink), 0 2px 8px rgba(15, 17, 21, 0.4);
+}
+
+.pin-dim {
+  opacity: 0.28;
+}
+
+.pin-halo {
+  position: absolute;
+  inset: -7px;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  animation: halo 1.6s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes halo {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.depot {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--color-ink);
+  color: #fff;
+  box-shadow: 0 0 0 2px #fff, 0 2px 6px rgba(15, 17, 21, 0.35);
+}
+
+/* ---------- Анимации интерфейса ---------- */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-in {
+  animation: fade-in 160ms ease-out both;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* выпадающие меню появляются от кнопки */
+.animate-pop {
+  animation: pop-in 120ms ease-out both;
+  transform-origin: top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pin-halo,
+  .animate-in,
+  .animate-pop {
+    animation: none;
+  }
+}
