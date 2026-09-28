@@ -10,8 +10,8 @@ jobs:
     name: Тесты, Python 3.10
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.10"
       - run: pip install -e "backend[dev]"
@@ -25,8 +25,8 @@ jobs:
       run:
         working-directory: frontend
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - run: npm ci --no-audit --no-fund
@@ -43,25 +43,48 @@ jobs:
     env:
       NO_BROWSER: "1"
     steps:
-      - uses: actions/checkout@v4
-      - name: ./run.sh
+      - uses: actions/checkout@v5
+
+      - name: ./run.sh и проверка сервера
         if: runner.os != 'Windows'
-        run: ./run.sh 8000 > server.log 2>&1 &
-      - name: run.bat
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: Start-Process cmd.exe -ArgumentList '/c', '.\run.bat 8000 > server.log 2>&1'
-      - name: Сервер отвечает
-        shell: bash
         run: |
-          for i in $(seq 1 120); do
-            curl -sf http://127.0.0.1:8000/api/health && break
+          ./run.sh 8000 > server.log 2>&1 &
+          for i in $(seq 1 90); do
+            curl -sf --max-time 5 http://127.0.0.1:8000/api/health && break
             sleep 2
           done
-          curl -sf http://127.0.0.1:8000/ | grep -q 'id="root"'
-          curl -sf -X POST http://127.0.0.1:8000/api/plan/solve \
+          curl -sf --max-time 10 http://127.0.0.1:8000/ | grep -q 'id="root"'
+          curl -sf --max-time 60 -X POST http://127.0.0.1:8000/api/plan/solve \
             -H 'Content-Type: application/json' -d '{"region": "east"}' > /dev/null
+
+      - name: run.bat и проверка сервера
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Start-Process cmd.exe -ArgumentList '/c', '.\run.bat 8000 > server.log 2>&1'
+          $up = $false
+          for ($i = 0; $i -lt 90 -and -not $up; $i++) {
+            try { Invoke-RestMethod http://127.0.0.1:8000/api/health -TimeoutSec 5 | Out-Null; $up = $true }
+            catch { Start-Sleep -Seconds 2 }
+          }
+          if (-not $up) { throw "Сервер не ответил" }
+          $page = Invoke-WebRequest http://127.0.0.1:8000/ -TimeoutSec 10
+          if ($page.Content -notmatch 'id="root"') { throw "Нет страницы интерфейса" }
+          Invoke-RestMethod -Method Post http://127.0.0.1:8000/api/plan/solve -TimeoutSec 60 `
+            -ContentType 'application/json' -Body '{"region": "east"}' | Out-Null
+
       - name: Журнал сервера
         if: always()
         shell: bash
-        run: cat server.log || true
+        run: cat server.log 2>/dev/null || echo "server.log не создан"
+
+      - name: Журнал сервера в аннотации
+        if: failure()
+        shell: bash
+        run: |
+          if [ -f server.log ]; then
+            msg=$(tail -c 3000 server.log | tr -d '\r' | sed 's/%/%25/g' | awk 'BEGIN { ORS = "%0A" } { print }')
+          else
+            msg="server.log не создан"
+          fi
+          echo "::error title=server.log::${msg}"
