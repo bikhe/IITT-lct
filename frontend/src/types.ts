@@ -47,6 +47,8 @@ export interface Order {
   bk_type?: string | null;
   hd_type?: string | null;
   released_min?: number | null;
+  /** Авария на узле: ID других заявок из файла, которые закрывает этот выезд. */
+  covers?: string[];
   status?: string;
 }
 
@@ -112,6 +114,10 @@ export interface PlanMetrics {
   emergency_avg_reaction_min?: number | null;
   emergency_max_reaction_min?: number | null;
   extra_crews_needed: number;
+  /** (дорога + работа) / длина смен бригад на линии, % */
+  avg_load_pct?: number | null;
+  /** бригад на линии с загрузкой ниже 50 % */
+  low_load_crews?: number;
   engineer_distances: Record<string, number>;
   engineer_order_counts: Record<string, number>;
 }

@@ -96,7 +96,7 @@ export const KpiStrip = ({ d, onShowUnassigned }: { d: Dispatcher; onShowUnassig
         value={num1(m.total_distance_km)}
         unit="км"
         delta={ref && <DeltaChip value={kmPct} digits={1} suffix=" %" good="down" />}
-        title={`${num1(kmPerOrder)} км на одну назначенную заявку`}
+        title={`${num1(kmPerOrder)} км на одну назначенную заявку; на автомобилях — ${num1(m.car_distance_km)} км`}
       />
       <Tile
         label="Аварии начаты за 2 ч"

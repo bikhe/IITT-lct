@@ -137,7 +137,7 @@ export const CompareView = ({ d, colors }: { d: Dispatcher; colors: Record<strin
           </MetricCard>
         </div>
 
-        <div className="mt-4 grid grid-cols-4 gap-4">
+        <div className="mt-4 grid grid-cols-5 gap-4">
           <Small
             label="Назначено заявок"
             ours={om.assigned_orders}
@@ -154,6 +154,13 @@ export const CompareView = ({ d, colors }: { d: Dispatcher; colors: Record<strin
             of={om.emergency_orders}
           />
           <Small label="Время в пути, ч" ours={om.total_travel_time_min / 60} base={bm.total_travel_time_min / 60} better="down" digits={1} />
+          <Small
+            label="Бригад с загрузкой < 50 %"
+            ours={om.low_load_crews ?? 0}
+            base={bm.low_load_crews ?? 0}
+            better="down"
+            title="Загрузка — дорога и работа от длины смены. Лишний человек на линии с загрузкой ниже 50 % хуже неравной нагрузки (разъяснение организаторов)"
+          />
         </div>
 
         <Card className="mt-4 p-5">
@@ -359,6 +366,7 @@ const Small = ({
   better,
   of,
   digits = 0,
+  title,
 }: {
   label: string;
   ours: number;
@@ -367,21 +375,24 @@ const Small = ({
   /** «из N» — общий знаменатель для обоих вариантов */
   of?: number;
   digits?: number;
+  title?: string;
 }) => {
   const fmt = (v: number) => (digits ? num1(v) : String(Math.round(v)));
   return (
     <Card className="px-4 py-3">
-      <div className="text-caption text-ink-3">{label}</div>
-      <div className="mt-1 flex items-baseline gap-2">
-        <span className="text-metric font-semibold tracking-[-0.02em]">
+      <div className="text-caption text-ink-3" title={title}>
+        {label}
+      </div>
+      <div className="mt-1 flex items-center gap-2">
+        <span className="text-metric font-semibold tracking-[-0.02em] whitespace-nowrap">
           {fmt(ours)}
           {of != null && <span className="text-body font-medium text-ink-3"> из {of}</span>}
         </span>
-        <span className="text-caption text-ink-3">базовый {fmt(base)}</span>
-        <span className="ml-auto self-center">
+        <span className="ml-auto">
           <DeltaChip value={ours - base} digits={digits} good={better} />
         </span>
       </div>
+      <div className="text-caption text-ink-3">базовый {fmt(base)}</div>
     </Card>
   );
 };

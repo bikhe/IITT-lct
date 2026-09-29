@@ -1,8 +1,9 @@
 """Перепланирование в течение дня по правилам организаторов (19.09, 22.09).
 
 - Начатая работа не прерывается; к заявке, куда бригада уже выехала, она доезжает (допущение).
-- Новая обычная заявка встаёт только в свободный интервал: чужие заявки не переносятся к другим
-  бригадам, их время может сдвинуться в пределах окон (со штрафом за сдвиг).
+- Новая обычная заявка встаёт только в свободный интервал бригад на линии: чужие заявки не
+  переносятся к другим бригадам, их время может сдвинуться в пределах окон (со штрафом за сдвиг).
+  Резервную бригаду вызываем только при форс-мажоре — аварии или сходе бригады (29.09).
 - Авария ставится как можно раньше (ориентир — 2 часа от поступления) и может перестроить хвост
   дня бригады; вытесненные заявки переназначаются, иначе помечаются «не назначена» с причиной.
 - Отмена освобождает время бригады; в освободившийся интервал пробуем поставить неназначенные.
@@ -26,7 +27,6 @@ from app.solver.objective import (
     CREW_PENALTY,
     LATE_KM_PER_MIN,
     STABILITY_KM_PER_MIN,
-    sla_deadline,
 )
 from app.solver.plan_builder import build_plan
 from app.solver.replan.alternatives import check, locked_reason, reason_text
@@ -206,16 +206,27 @@ class ReplanEngine:
             )
 
         if order.is_emergency:
-            placed_eid, evicted, left = self._place_emergency(fleet, order, t)
+            placed_eid, evicted, left, blocked = self._place_emergency(fleet, order, t)
             for o in left:
                 lost_context[o.id] = f"Вытеснена аварией #{order.id}."
             pool = pool + left
             if placed_eid is None:
                 pool.append(order)
-                summary = (
-                    f"Авария #{order.id} ({minutes_to_time(t)}): ни одна бригада с навыком "
-                    f"«Аварийные работы» не может её взять."
-                )
+                if blocked:
+                    lost_context[order.id] = (
+                        "Бригады с навыком «Аварийные работы» до конца смены заняты другими "
+                        "авариями, а другие аварии не снимаем."
+                    )
+                    summary = (
+                        f"Авария #{order.id} ({minutes_to_time(t)}): бригады с навыком «Аварийные "
+                        "работы» до конца смены заняты другими авариями. Назначьте вручную или "
+                        "вызовите бригаду."
+                    )
+                else:
+                    summary = (
+                        f"Авария #{order.id} ({minutes_to_time(t)}): ни одна бригада с навыком "
+                        f"«Аварийные работы» не может её взять."
+                    )
             else:
                 st = fleet.states[placed_eid]
                 start = st.starts[st.order_ids.index(order.id)]
@@ -231,11 +242,20 @@ class ReplanEngine:
                     summary += f", снято {len(left)}." if left else "."
             return fleet, pool, _Outcome(summary, lost_context)
 
+        # обычная заявка — не форс-мажор: резервную бригаду ради неё не вызываем (29.09),
+        # решение о вызове остаётся за диспетчером (ручное назначение)
         left = insert_pool(
-            fleet, [order], crew_penalty=self.crew_penalty, stability=STABILITY_KM_PER_MIN
+            fleet,
+            [order],
+            crew_penalty=self.crew_penalty,
+            allow_activation=False,
+            stability=STABILITY_KM_PER_MIN,
         )
         if left:
-            summary = f"Новая заявка #{order.id} ({order.kind.label_ru.lower()}): свободного интервала нет."
+            summary = (
+                f"Новая заявка #{order.id} ({order.kind.label_ru.lower()}): у бригад на линии "
+                "нет свободного интервала."
+            )
             return fleet, pool + left, _Outcome(summary, lost_context)
         eid = fleet.owner_of(order.id)
         st = fleet.states[eid]
@@ -348,7 +368,7 @@ class ReplanEngine:
         others = [o for o in orphans if not o.is_emergency]
         left: list[Order] = []
         for em in sorted(emergencies, key=lambda o: (o.window.start_min, o.id)):
-            placed, _, evicted_left = self._place_emergency(fleet, em, t)
+            placed, _, evicted_left, _ = self._place_emergency(fleet, em, t)
             for o in evicted_left:
                 lost_context[o.id] = f"Вытеснена аварией #{em.id}."
             left += evicted_left
@@ -403,18 +423,23 @@ class ReplanEngine:
 
     def _place_emergency(
         self, fleet: Fleet, order: Order, t: int
-    ) -> tuple[str | None, list[Order], list[Order]]:
+    ) -> tuple[str | None, list[Order], list[Order], bool]:
         """Ставит аварию как можно раньше, при необходимости вытесняя хвост маршрута.
 
         Перебирает бригаду и позицию; заявки после аварии, которые перестают успевать, снимаются
-        и переназначаются regret-вставкой. Выбор: (1) успеть в SLA, (2) не потерять заявки,
-        (3) не выводить новых бригад, (4) взвешенно: км, время реакции и число переносов.
-        Возвращает (бригада | None, вытесненные, из них не поставленные никуда).
+        и переназначаются regret-вставкой. Ради аварии можно снять обычные заявки (время с клиентом
+        согласует поддержка, 19.09), но не другие аварии: если без этого её не поставить, она
+        остаётся без исполнителя. Выбор: (1) меньше аварий позже 2 ч — новая и уже стоящие в плане;
+        (2) меньше снятых заявок с учётом приоритета; (3) меньше бригад: резерв выводится, только
+        если иначе авария опоздает или заявки останутся без исполнителя; (4) взвешенно: км, время
+        реакции и число переносов.
+        Возвращает (бригада | None, вытесненные, из них не поставленные никуда, мешают ли другие
+        аварии — True, если поставить можно было только сняв другую аварию).
         """
         ev = fleet.evaluator
-        deadline = sla_deadline(order, ev.day_start_min) or (t + 120)
         best: tuple[tuple, dict, list[Order], list[Order], str] | None = None
         base = fleet.snapshot()
+        blocked = False
 
         for eng in fleet.engineers:
             eid = eng.id
@@ -444,10 +469,13 @@ class ReplanEngine:
                     stability=STABILITY_KM_PER_MIN,
                     exclude={eid},
                 ) if evicted else []
+                if any(o.is_emergency for o in left):
+                    blocked = True  # другую аварию не снимаем
+                    continue
                 final = fleet.states[eid]
                 em_start = final.starts[final.order_ids.index(order.id)]
                 key = (
-                    em_start > deadline,
+                    fleet.breaches(),
                     sum(o.kind.weight for o in left),
                     fleet.crews(),
                     round(
@@ -464,7 +492,7 @@ class ReplanEngine:
 
         if best is None:
             fleet.restore(base)
-            return None, [], []
+            return None, [], [], blocked
         _, snap, evicted, left, eid = best
         fleet.restore(snap)
-        return eid, evicted, left
+        return eid, evicted, left, False

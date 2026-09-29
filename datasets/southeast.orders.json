@@ -27,6 +27,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -57,6 +58,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -87,6 +89,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -117,6 +120,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -147,6 +151,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -177,6 +182,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -207,6 +213,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -237,6 +244,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -267,6 +275,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -297,6 +306,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -327,6 +337,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -357,6 +368,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -387,6 +399,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -403,7 +416,7 @@
       "end_min": 1080
     },
     "duration_min": 70,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 55.63461,
       "lon": 37.67125,
@@ -417,6 +430,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -447,6 +461,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -477,6 +492,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -507,6 +523,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -537,6 +554,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -567,6 +585,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -597,6 +616,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -613,7 +633,7 @@
       "end_min": 720
     },
     "duration_min": 70,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 55.59369,
       "lon": 37.66676,
@@ -627,6 +647,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -657,6 +678,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -687,6 +709,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -717,6 +740,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заявка на подключение",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -747,6 +771,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -777,6 +802,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заявка на подключение",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -793,7 +819,7 @@
       "end_min": 720
     },
     "duration_min": 70,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 54.83898,
       "lon": 38.15153,
@@ -807,6 +833,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -823,7 +850,7 @@
       "end_min": 840
     },
     "duration_min": 70,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 54.84224,
       "lon": 38.16734,
@@ -837,6 +864,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -867,6 +895,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заявка на подключение",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -897,6 +926,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -927,6 +957,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -957,6 +988,7 @@
     "bk_type": "Подключение",
     "hd_type": "Заявка на подключение",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -973,7 +1005,7 @@
       "end_min": 720
     },
     "duration_min": 70,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 55.6111,
       "lon": 37.73363,
@@ -987,6 +1019,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1017,6 +1050,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1047,6 +1081,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1063,7 +1098,7 @@
       "end_min": 840
     },
     "duration_min": 70,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 55.62322,
       "lon": 37.75383,
@@ -1077,6 +1112,7 @@
     "bk_type": "Подключение",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1107,6 +1143,7 @@
     "bk_type": "Дозаказ",
     "hd_type": "Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1137,6 +1174,7 @@
     "bk_type": "Дозаказ",
     "hd_type": "Заказ подключения/Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1153,7 +1191,7 @@
       "end_min": 1320
     },
     "duration_min": 20,
-    "required_transport": "car",
+    "required_transport": null,
     "location": {
       "lat": 54.83641,
       "lon": 38.15405,
@@ -1167,6 +1205,7 @@
     "bk_type": "Дозаказ",
     "hd_type": "Конвергенция абонента",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1197,6 +1236,7 @@
     "bk_type": "Дозаказ",
     "hd_type": "Дозаказ оборудования",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1227,6 +1267,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1257,6 +1298,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1273,7 +1315,7 @@
       "end_min": 1200
     },
     "duration_min": 30,
-    "required_transport": null,
+    "required_transport": "car",
     "location": {
       "lat": 55.63274,
       "lon": 37.77075,
@@ -1287,6 +1329,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Работа с кабелем",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1303,7 +1346,7 @@
       "end_min": 1320
     },
     "duration_min": 30,
-    "required_transport": null,
+    "required_transport": "car",
     "location": {
       "lat": 54.89259,
       "lon": 38.07266,
@@ -1317,6 +1360,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Работа с кабелем",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1347,6 +1391,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Низкая скорость",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1377,6 +1422,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1407,6 +1453,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1437,6 +1484,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Низкая скорость",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1467,6 +1515,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Рост ошибок на порту",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1483,7 +1532,7 @@
       "end_min": 720
     },
     "duration_min": 30,
-    "required_transport": null,
+    "required_transport": "car",
     "location": {
       "lat": 54.89259,
       "lon": 38.07266,
@@ -1497,6 +1546,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Работа с кабелем",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1527,6 +1577,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1557,6 +1608,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Роутер. Замена техническим специалистом",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1587,6 +1639,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1617,6 +1670,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Переключение на Гбит/с",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1647,6 +1701,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "TVE/ENT. Замена приставки техником",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1677,6 +1732,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Рост ошибок на порту",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1707,6 +1763,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "IP-адрес 169...",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1737,6 +1794,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Низкая скорость",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1767,6 +1825,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Низкая скорость",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1797,6 +1856,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Переключение на Гбит/с",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1827,6 +1887,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1857,6 +1918,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "IP-адрес 169...",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1887,6 +1949,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "TVE/ENT. Замена приставки техником",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1917,6 +1980,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Рост ошибок на порту",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1947,6 +2011,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -1977,6 +2042,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Разрывы",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2007,6 +2073,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2037,6 +2104,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2067,6 +2135,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Нет линка",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2097,6 +2166,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "Рост ошибок на порту",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2127,6 +2197,7 @@
     "bk_type": "Локальная заявка",
     "hd_type": "IP-адрес 169...",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2157,6 +2228,7 @@
     "bk_type": "Глобальная проблема",
     "hd_type": "Авария",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2175,9 +2247,9 @@
     "duration_min": 80,
     "required_transport": "car",
     "location": {
-      "lat": 54.83991,
-      "lon": 38.16255,
-      "address": "МО, г. Кашира Центральная ул. д. 21",
+      "lat": 54.84252,
+      "lon": 38.16141,
+      "address": "МО, г. Кашира — авария на узле, 7 домов: Центральная ул. д. 21; Кржижановского ул. д. 5/1; Кржижановского ул. д. 7к2; Кржижановского ул. д. 5/3; Кржижановского ул. д. 5/2; Кржижановского ул. д. 5/1; Центральная ул. д. 19",
       "district": "Кашира"
     },
     "tech": {
@@ -2187,156 +2259,14 @@
     "bk_type": "Глобальная проблема",
     "hd_type": "Авария",
     "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "98998",
-    "skills": [
-      "emergency"
+    "covers": [
+      "98998",
+      "32589",
+      "51774",
+      "90915",
+      "45243",
+      "65034"
     ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.84985,
-      "lon": 38.16536,
-      "address": "МО, г. Кашира Кржижановского ул. д. 5/1",
-      "district": "Кашира"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "32589",
-    "skills": [
-      "emergency"
-    ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.83677,
-      "lon": 38.14286,
-      "address": "МО, г. Кашира Кржижановского ул. д. 7к2",
-      "district": "Кашира"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "51774",
-    "skills": [
-      "emergency"
-    ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.83751,
-      "lon": 38.17086,
-      "address": "МО, г. Кашира Кржижановского ул. д. 5/3",
-      "district": "Кашира"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "90915",
-    "skills": [
-      "emergency"
-    ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.83458,
-      "lon": 38.14631,
-      "address": "МО, г. Кашира Кржижановского ул. д. 5/2",
-      "district": "Кашира"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "45243",
-    "skills": [
-      "emergency"
-    ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.84985,
-      "lon": 38.16536,
-      "address": "МО, г. Кашира Кржижановского ул. д. 5/1",
-      "district": "Кашира"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
     "status": "unassigned"
   },
   {
@@ -2355,9 +2285,9 @@
     "duration_min": 80,
     "required_transport": "car",
     "location": {
-      "lat": 54.89357,
-      "lon": 38.08494,
-      "address": "МО, г. Ступино Андропова ул. д. 37",
+      "lat": 54.89496,
+      "lon": 38.07421,
+      "address": "МО, г. Ступино — авария на узле, 2 дома: Андропова ул. д. 37; Андропова ул. д. 33",
       "district": "Ступино"
     },
     "tech": {
@@ -2367,66 +2297,9 @@
     "bk_type": "Глобальная проблема",
     "hd_type": "Авария",
     "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "97168",
-    "skills": [
-      "emergency"
+    "covers": [
+      "97168"
     ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.89636,
-      "lon": 38.06348,
-      "address": "МО, г. Ступино Андропова ул. д. 33",
-      "district": "Ступино"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
-    "status": "unassigned"
-  },
-  {
-    "id": "65034",
-    "skills": [
-      "emergency"
-    ],
-    "priority": "urgent",
-    "work_type": "emergency",
-    "window": {
-      "start": "00:01",
-      "end": "23:59",
-      "start_min": 1,
-      "end_min": 1439
-    },
-    "duration_min": 80,
-    "required_transport": "car",
-    "location": {
-      "lat": 54.84918,
-      "lon": 38.17655,
-      "address": "МО, г. Кашира Центральная ул. д. 19",
-      "district": "Кашира"
-    },
-    "tech": {
-      "product": null,
-      "gbit": false
-    },
-    "bk_type": "Глобальная проблема",
-    "hd_type": "Авария",
-    "released_min": null,
     "status": "unassigned"
   },
   {
@@ -2457,6 +2330,7 @@
     "bk_type": "Глобальная проблема",
     "hd_type": "Авария",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   },
   {
@@ -2487,6 +2361,7 @@
     "bk_type": "Глобальная проблема",
     "hd_type": "Авария",
     "released_min": null,
+    "covers": [],
     "status": "unassigned"
   }
 ]

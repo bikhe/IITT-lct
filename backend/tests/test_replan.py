@@ -15,7 +15,8 @@ def day():
     """Две бригады, по две заявки утром и днём у каждой."""
     engineers = [
         make_engineer("e1", "Бригада Первая", [Skill.LOCAL, Skill.CONNECTION, Skill.EMERGENCY]),
-        make_engineer("e2", "Бригада Вторая", [Skill.LOCAL, Skill.CONNECTION], lat=55.72, lon=37.66),
+        # вторая бригада стартует дальше от заявок: утром на линии только первая
+        make_engineer("e2", "Бригада Вторая", [Skill.LOCAL, Skill.CONNECTION], lat=55.76, lon=37.60),
     ]
     orders = [
         make_order("m1", start="10:00", end="12:00", duration=30, lat=55.71, lon=37.69),
@@ -266,3 +267,48 @@ def test_manual_assign_rejects_started_work(day) -> None:
     )
     with pytest.raises(ReplanError, match="нельзя переназначить"):
         ReplanEngine().apply_event(plan2, manual, orders2, engineers)
+
+
+def test_new_regular_order_does_not_call_in_a_reserve_crew() -> None:
+    """Эксперты 29.09: дополнительную бригаду выводят при форс-мажоре (авария, сход), не ради
+    обычной заявки. Если у бригад на линии нет места, заявка остаётся без исполнителя с причиной."""
+    engineers = [
+        make_engineer("e1", "Бригада Первая", [Skill.LOCAL]),
+        make_engineer("e2", "Бригада Резерв", [Skill.LOCAL]),
+    ]
+    orders = [make_order("a", start="10:00", end="12:00", duration=150)]
+    plan = Solver().solve(orders, engineers)
+    assert {r.engineer_id for r in plan.routes if r.jobs} == {"e1"}
+    new = make_order("n", start="10:00", end="11:30", duration=60)
+    event = ReplanEvent(event_type=EventType.NEW_ORDER, event_time="10:05", new_order=new)
+    new_plan, diff, orders2 = ReplanEngine().apply_event(plan, event, orders, engineers)
+    assert_plan_valid(new_plan, orders2, engineers)
+    assert "n" in new_plan.unassigned_orders and not diff.called_in_engineer_ids
+    assert "не на линии" in new_plan.unassigned_orders["n"]
+    # авария — форс-мажор: резерв вызывается
+    sos = make_order("sos", skill=Skill.LOCAL, start="10:10", end="23:59", duration=60)
+    sos = sos.model_copy(update={"work_type": WorkType.EMERGENCY})
+    urgent = ReplanEvent(event_type=EventType.URGENT_ORDER, event_time="10:10", new_order=sos)
+    engineers2 = [e.model_copy(update={"skills": [Skill.LOCAL, Skill.EMERGENCY]}) for e in engineers]
+    plan3, diff3, orders3 = ReplanEngine().apply_event(new_plan, urgent, orders2, engineers2)
+    assert_plan_valid(plan3, orders3, engineers2)
+    assert diff3.called_in_engineer_ids == ["e2"]
+
+
+def test_new_emergency_never_drops_another_emergency() -> None:
+    """Новая авария может снять обычные заявки, но не другую аварию: если иначе не поставить,
+    она остаётся без исполнителя с понятной причиной, а прежняя авария — в плане."""
+    engineers = [
+        make_engineer("e1", "Бригада Аварийная", [Skill.LOCAL, Skill.EMERGENCY], shift_end="13:00"),
+    ]
+    first = make_order("a1", skill=Skill.EMERGENCY, start="11:00", end="13:00", duration=80)
+    first = first.model_copy(update={"work_type": WorkType.EMERGENCY})
+    plan = Solver().solve([first], engineers)
+    assert plan.routes[0].jobs[0].order_id == "a1"
+    new = make_order("a2", skill=Skill.EMERGENCY, start="10:30", end="23:59", duration=0)
+    event = ReplanEvent(event_type=EventType.URGENT_ORDER, event_time="10:30", new_order=new)
+    new_plan, diff, orders2 = ReplanEngine().apply_event(plan, event, [first], engineers)
+    assert_plan_valid(new_plan, orders2, engineers)
+    assert [j.order_id for j in new_plan.routes[0].jobs] == ["a1"]
+    assert "a2" in new_plan.unassigned_orders
+    assert "заняты другими авариями" in diff.summary_ru

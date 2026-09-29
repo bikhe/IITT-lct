@@ -251,6 +251,7 @@ const OrderList = ({
         if (!q) return true;
         return (
           o.id.toLowerCase().includes(q) ||
+          (o.covers ?? []).some((id) => id.includes(q)) ||
           o.location.address.toLowerCase().includes(q) ||
           o.location.district.toLowerCase().includes(q)
         );

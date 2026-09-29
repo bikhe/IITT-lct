@@ -53,9 +53,13 @@ class Fleet:
     def km(self) -> float:
         return sum(st.km for st in self.states.values())
 
+    def breaches(self) -> int:
+        """Аварии, которые начнутся позже SLA (2 часа от поступления)."""
+        return sum(st.breaches for st in self.states.values())
+
     def score(self, unassigned: list[Order] | None = None) -> PlanScore:
         lost = sum(o.kind.weight for o in unassigned or [])
-        return PlanScore(lost, self.crews(), round(self.cost(), 6))
+        return PlanScore(lost, self.breaches(), self.crews(), round(self.cost(), 6))
 
     def assigned_ids(self) -> set[str]:
         return {oid for st in self.states.values() for oid in st.order_ids}

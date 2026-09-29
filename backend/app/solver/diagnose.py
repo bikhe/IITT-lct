@@ -59,8 +59,9 @@ def describe(
     *,
     event_time_min: int | None = None,
     context: str | None = None,
+    active: frozenset[str] | set[str] = frozenset(),
 ) -> UnassignedInfo:
-    """Сводит причины по бригадам в одну фразу и подсказку."""
+    """Сводит причины по бригадам в одну фразу и подсказку. active — бригады на линии."""
     window = f"{order.window.start}–{order.window.end}"
     counts = Counter(code.value if code else "ok" for code in reasons.values())
     names = {e.id: e.name for e in engineers}
@@ -106,6 +107,11 @@ def describe(
             else:
                 text = f"Подходящие бригады ({len(fit)}) уже не успевают доехать в окно {window}."
             hint = f"Нужна бригада с {need}, свободная в {window}."
+        elif free and any(eid in active for eid in free):
+            code = ReasonCode.BUSY
+            listed = ", ".join(names.get(eid, eid) for eid in free if eid in active)
+            text = f"Есть свободное время у бригады на линии: {listed}."
+            hint = "Назначьте вручную."
         elif free:
             code = ReasonCode.BUSY
             listed = ", ".join(names.get(eid, eid) for eid in free[:3])
@@ -147,8 +153,14 @@ def diagnose(
     context: str | None = None,
 ) -> UnassignedInfo:
     reasons = engineer_reasons(fleet, order, append_only=append_only)
+    active = {e.id for e in fleet.engineers if fleet.is_active(e.id)}
     return describe(
-        order, reasons, fleet.engineers, event_time_min=event_time_min, context=context
+        order,
+        reasons,
+        fleet.engineers,
+        event_time_min=event_time_min,
+        context=context,
+        active=active,
     )
 
 

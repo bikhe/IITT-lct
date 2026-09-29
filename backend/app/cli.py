@@ -11,7 +11,9 @@ from rich.panel import Panel
 from rich.table import Table
 
 from app.data import EngineerSynthesizer, OrderNormalizer, RawDatasetLoader
-from app.domain.models import Engineer, Order
+from app.data.normalizer import merge_node_accidents
+from app.data.synth_engineers import crew_histories
+from app.domain.models import Engineer, Order, TimeWindow, minutes_to_time
 from app.solver import BaselineSolver, Solver, compare_plans
 from app.solver.explain import ExplanationGenerator
 
@@ -77,8 +79,12 @@ def get_raw_docs_dir() -> Path:
     return root_docs
 
 
-def build_datasets() -> None:
-    """Нормализует сырые CSV и сохраняет структурированные JSON в datasets/."""
+def build_datasets(*, merge_nodes: bool = True) -> None:
+    """Нормализует сырые CSV и сохраняет структурированные JSON в datasets/.
+
+    merge_nodes — аварии в одном городе области с одинаковым окном объединяются в одну аварию
+    на узле (разрешено экспертами 29.09); False — каждый дом отдельным выездом.
+    """
     raw_dir = get_raw_docs_dir()
     out_dir = get_dataset_dir()
     console.print(
@@ -113,10 +119,13 @@ def build_datasets() -> None:
 
         raw_records, office_rec = loader.load_csv(syn_files[0])
         orders = normalizer.normalize_list(raw_records)
+        if merge_nodes:
+            orders = merge_node_accidents(orders)
 
         ctrl_records, _ = loader.load_csv(ctrl_files[0])
-        brigade_names = list({r["Бригада"] for r in ctrl_records if r.get("Бригада")})
-        engineers = synthesizer.synthesize_for_region(reg_key, brigade_names, office_rec)
+        engineers = synthesizer.synthesize_for_region(
+            reg_key, crew_histories(ctrl_records), office_rec
+        )
 
         # Сохранение orders JSON
         orders_file = out_dir / f"{reg_key}.orders.json"
@@ -331,40 +340,70 @@ def cmd_solve(args: argparse.Namespace) -> None:
     console.print(f"[bold green]✓ План сохранен в файл: [cyan]{out_path}[/cyan][/bold green]\n")
 
 
+def widen_windows(orders: list[Order], extra_min: int = 120, cap_min: int = 22 * 60) -> list[Order]:
+    """Эксперимент из разъяснений организаторов: окно 2 ч → 4 ч (10–12 → 10–14), не позже 22:00."""
+    out = []
+    for o in orders:
+        w = o.window
+        if w.end_min - w.start_min <= 120:
+            end = minutes_to_time(min(w.end_min + extra_min, max(cap_min, w.end_min)))
+            o = o.model_copy(update={"window": TimeWindow(start=w.start, end=end)})
+        out.append(o)
+    return out
+
+
+def _benchmark_table(
+    title: str, rows: list[tuple[str, Any, Any, float]], sub: str = "наш / баз."
+) -> Table:
+    table = Table(title=title, box=box.ROUNDED, header_style="bold magenta")
+    for name, justify in (
+        ("Участок", "left"),
+        ("Заявок", "right"),
+        (f"Назначено\n{sub}", "right"),
+        (f"Бригад\n{sub}", "right"),
+        (f"Пробег, км\n{sub}", "right"),
+        (f"Км на заявку\n{sub}", "right"),
+        (f"Загрузка, % (< 50 %)\n{sub}", "right"),
+        (f"Аварии ≤ 2 ч\n{sub}", "right"),
+        ("Расчёт, с", "right"),
+    ):
+        table.add_column(name, justify=justify)  # type: ignore[arg-type]
+    for name, opt, base, elapsed in rows:
+
+        def kpo(m: Any) -> float:
+            return m.total_distance_km / m.assigned_orders if m.assigned_orders else 0.0
+
+        table.add_row(
+            name,
+            str(opt.total_orders),
+            f"[green]{opt.assigned_orders}[/green] / {base.assigned_orders}",
+            f"[green]{opt.active_engineers_count}[/green] / {base.active_engineers_count}",
+            f"[green]{opt.total_distance_km:.1f}[/green] / {base.total_distance_km:.1f}",
+            f"[green]{kpo(opt):.2f}[/green] / {kpo(base):.2f}",
+            f"{opt.avg_load_pct or 0:.0f} ({opt.low_load_crews}) / "
+            f"{base.avg_load_pct or 0:.0f} ({base.low_load_crews})",
+            f"{opt.emergency_within_sla}/{opt.emergency_orders} / "
+            f"{base.emergency_within_sla}/{base.emergency_orders}",
+            f"{elapsed:.2f}",
+        )
+    return table
+
+
 def cmd_benchmark(args: argparse.Namespace) -> None:
-    """Запуск бенчмарка: Наш оптимизированный солвер vs Базовый вариант FIFO (ТЗ §2.3) по всем регионам."""
+    """Наш план против базового варианта ТЗ §2.3 по всем участкам (и эксперимент с окнами 4 ч)."""
     console.print(
         Panel.fit(
-            "[bold white]БЕНЧМАРК ЭФФЕКТИВНОСТИ ПЛАНИРОВАНИЯ (ТЗ §2.3, §4.7)[/bold white]\n"
-            "[cyan]Сравнение: MCT Regret-2 + Local Search против Базового варианта (FIFO)[/cyan]",
+            "[bold white]Наш план против базового варианта ТЗ §2.3[/bold white]\n"
+            "[cyan]Базовый: заявки по порядку файла — первой подходящей бригаде[/cyan]",
             border_style="yellow",
         )
     )
 
-    summary_table = Table(
-        title="Сводные результаты бенчмарка по трем регионам",
-        box=box.ROUNDED,
-        header_style="bold magenta",
-    )
-    summary_table.add_column("Регион", style="cyan")
-    summary_table.add_column("Заявок всего", justify="right")
-    summary_table.add_column("Назначено (Наш)", justify="right", style="green")
-    summary_table.add_column("Назначено (База)", justify="right")
-    summary_table.add_column("Бригад (Наш)", justify="right", style="green")
-    summary_table.add_column("Бригад (База)", justify="right")
-    summary_table.add_column("Δ Бригад", justify="right", style="bold yellow")
-    summary_table.add_column("Км/заявку (Наш)", justify="right", style="green")
-    summary_table.add_column("Км/заявку (База)", justify="right")
-    summary_table.add_column("Пробег Наш (км)", justify="right")
-    summary_table.add_column("Пробег База (км)", justify="right")
-    summary_table.add_column("Аварии ≤2 ч (Наш)", justify="right")
-    summary_table.add_column("Время, с", justify="right")
-
     benchmark_data: dict[str, Any] = {}
-
+    rows: list[tuple[str, Any, Any, float]] = []
+    wide_rows: list[tuple[str, Any, Any, float]] = []
     for reg_key, reg_info in REGIONS.items():
         orders, engineers = load_normalized_dataset(reg_key)
-
         solver = Solver(use_local_search=True)
         baseline_solver = BaselineSolver(solver.distance_provider)
 
@@ -372,49 +411,31 @@ def cmd_benchmark(args: argparse.Namespace) -> None:
         opt_plan = solver.solve(orders, engineers)
         elapsed = time.perf_counter() - started
         base_plan = baseline_solver.solve(orders, engineers)
+        rows.append((reg_info["name_ru"], opt_plan.metrics, base_plan.metrics, elapsed))
+        benchmark_data[reg_key] = compare_plans(opt_plan, base_plan)
 
-        diff = compare_plans(opt_plan, base_plan)
+        if getattr(args, "wide_windows", False):
+            wide = widen_windows(orders)
+            started = time.perf_counter()
+            wide_plan = solver.solve(wide, engineers)
+            wide_elapsed = time.perf_counter() - started
+            wide_rows.append(
+                (reg_info["name_ru"], wide_plan.metrics, opt_plan.metrics, wide_elapsed)
+            )
+            benchmark_data[f"{reg_key}_wide_windows"] = compare_plans(wide_plan, opt_plan)
 
-        crew_diff = diff["delta"]["crew_count"]
-        crew_delta_str = (
-            f"[bold green]{crew_diff}[/bold green]" if crew_diff < 0 else "0"
+    console.print(_benchmark_table("Наш план / базовый вариант", rows))
+    if wide_rows:
+        console.print(
+            _benchmark_table(
+                "Эксперимент: окна клиентов 4 ч вместо 2 ч (наш план)", wide_rows, sub="4 ч / 2 ч"
+            )
         )
-
-        opt_kpo = diff["optimized"]["km_per_order"]
-        base_kpo = diff["baseline"]["km_per_order"]
-        kpo_str = (
-            f"[bold green]{opt_kpo:.1f}[/bold green]"
-            if opt_kpo <= base_kpo
-            else f"{opt_kpo:.1f}"
-        )
-
-        summary_table.add_row(
-            reg_info["name_ru"],
-            str(opt_plan.metrics.total_orders),
-            f"{opt_plan.metrics.assigned_orders} ({opt_plan.metrics.assignment_rate_pct}%)",
-            f"{base_plan.metrics.assigned_orders} ({base_plan.metrics.assignment_rate_pct}%)",
-            str(opt_plan.metrics.active_engineers_count),
-            str(base_plan.metrics.active_engineers_count),
-            crew_delta_str,
-            kpo_str,
-            f"{base_kpo:.1f}",
-            f"{opt_plan.metrics.total_distance_km:.1f}",
-            f"{base_plan.metrics.total_distance_km:.1f}",
-            f"{opt_plan.metrics.emergency_within_sla}/{opt_plan.metrics.emergency_orders}",
-            f"{elapsed:.1f}",
-        )
-
-        benchmark_data[reg_key] = diff
-
-    console.print(summary_table)
 
     report_path = get_out_dir() / "benchmark_report.json"
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(benchmark_data, f, ensure_ascii=False, indent=2)
-
-    console.print(
-        f"[bold green]✓ Отчет бенчмарка успешно сохранен в: [cyan]{report_path}[/cyan][/bold green]\n"
-    )
+    console.print(f"[bold green]✓ Отчёт сохранён: [cyan]{report_path}[/cyan][/bold green]\n")
 
     if getattr(args, "update_readme", False):
         update_readme_benchmark_table(benchmark_data)
@@ -427,7 +448,14 @@ def main() -> None:
     subparsers = parser.add_subparsers(dest="command", help="Команда для выполнения")
 
     # build-datasets
-    subparsers.add_parser("build-datasets", help="Собрать нормализованные JSON датасеты из CSV")
+    build_parser = subparsers.add_parser(
+        "build-datasets", help="Собрать нормализованные JSON датасеты из CSV"
+    )
+    build_parser.add_argument(
+        "--no-node-merge",
+        action="store_true",
+        help="Не объединять аварии одного города области в аварию на узле",
+    )
 
     # solve
     solve_parser = subparsers.add_parser("solve", help="Решить задачу для выбранного региона")
@@ -458,11 +486,16 @@ def main() -> None:
         action="store_true",
         help="Автоматически обновить таблицу в README.md",
     )
+    benchmark_parser.add_argument(
+        "--wide-windows",
+        action="store_true",
+        help="Эксперимент: окна клиентов 4 ч вместо 2 ч (10–12 → 10–14)",
+    )
 
     args = parser.parse_args()
 
     if args.command == "build-datasets":
-        build_datasets()
+        build_datasets(merge_nodes=not args.no_node_merge)
     elif args.command == "solve":
         cmd_solve(args)
     elif args.command == "benchmark":

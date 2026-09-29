@@ -3,10 +3,10 @@
     "id": "eng_east_01",
     "name": "Бригада Арташкин",
     "skills": [
-      "connection",
-      "local"
+      "local",
+      "connection"
     ],
-    "transport": "car",
+    "transport": "foot",
     "shift": {
       "start": "10:00",
       "end": "19:00",
@@ -14,8 +14,8 @@
       "end_min": 1140
     },
     "depot": {
-      "lat": 55.6996,
-      "lon": 37.7587,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -24,18 +24,20 @@
     "id": "eng_east_02",
     "name": "Бригада Белузин",
     "skills": [
-      "local"
+      "local",
+      "connection",
+      "emergency"
     ],
     "transport": "car",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.7026,
-      "lon": 37.7707,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -44,18 +46,19 @@
     "id": "eng_east_03",
     "name": "Бригада Гусаковский",
     "skills": [
+      "local",
       "connection"
     ],
     "transport": "car",
     "shift": {
-      "start": "13:00",
+      "start": "10:00",
       "end": "22:00",
-      "start_min": 780,
+      "start_min": 600,
       "end_min": 1320
     },
     "depot": {
       "lat": 55.7056,
-      "lon": 37.7627,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -64,8 +67,8 @@
     "id": "eng_east_04",
     "name": "Бригада Зверев",
     "skills": [
-      "emergency",
-      "local"
+      "local",
+      "connection"
     ],
     "transport": "transit",
     "shift": {
@@ -75,8 +78,8 @@
       "end_min": 1140
     },
     "depot": {
-      "lat": 55.7086,
-      "lon": 37.7747,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -85,19 +88,18 @@
     "id": "eng_east_05",
     "name": "Бригада Каушнян",
     "skills": [
-      "local",
       "connection",
       "emergency"
     ],
     "transport": "car",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.7116,
+      "lat": 55.7056,
       "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
@@ -107,19 +109,19 @@
     "id": "eng_east_06",
     "name": "Бригада Комарь",
     "skills": [
-      "connection",
-      "emergency"
+      "local",
+      "connection"
     ],
-    "transport": "foot",
+    "transport": "transit",
     "shift": {
-      "start": "13:00",
+      "start": "10:00",
       "end": "22:00",
-      "start_min": 780,
+      "start_min": 600,
       "end_min": 1320
     },
     "depot": {
-      "lat": 55.6996,
-      "lon": 37.7587,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -128,18 +130,19 @@
     "id": "eng_east_07",
     "name": "Бригада Матвеев",
     "skills": [
-      "local"
+      "local",
+      "connection"
     ],
-    "transport": "car",
+    "transport": "transit",
     "shift": {
       "start": "10:00",
-      "end": "19:00",
+      "end": "22:00",
       "start_min": 600,
-      "end_min": 1140
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.7026,
-      "lon": 37.7707,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -148,19 +151,19 @@
     "id": "eng_east_08",
     "name": "Бригада Мельников",
     "skills": [
-      "connection",
-      "local"
+      "local",
+      "connection"
     ],
     "transport": "bike",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
     },
     "depot": {
       "lat": 55.7056,
-      "lon": 37.7627,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -170,19 +173,18 @@
     "name": "Бригада Перов",
     "skills": [
       "local",
-      "connection",
-      "emergency"
+      "connection"
     ],
-    "transport": "car",
+    "transport": "foot",
     "shift": {
-      "start": "13:00",
-      "end": "22:00",
-      "start_min": 780,
-      "end_min": 1320
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
     },
     "depot": {
-      "lat": 55.7086,
-      "lon": 37.7747,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -191,17 +193,18 @@
     "id": "eng_east_10",
     "name": "Бригада Попов",
     "skills": [
-      "local"
+      "local",
+      "connection"
     ],
     "transport": "car",
     "shift": {
       "start": "10:00",
-      "end": "19:00",
+      "end": "22:00",
       "start_min": 600,
-      "end_min": 1140
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.7116,
+      "lat": 55.7056,
       "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
@@ -211,18 +214,19 @@
     "id": "eng_east_11",
     "name": "Бригада Свеженцев",
     "skills": [
-      "connection"
+      "local",
+      "emergency"
     ],
-    "transport": "transit",
+    "transport": "car",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.6996,
-      "lon": 37.7587,
+      "lat": 55.7056,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }
@@ -231,40 +235,20 @@
     "id": "eng_east_12",
     "name": "Бригада Соколов",
     "skills": [
-      "emergency",
-      "local"
-    ],
-    "transport": "car",
-    "shift": {
-      "start": "13:00",
-      "end": "22:00",
-      "start_min": 780,
-      "end_min": 1320
-    },
-    "depot": {
-      "lat": 55.7026,
-      "lon": 37.7707,
-      "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
-      "district": "east"
-    }
-  },
-  {
-    "id": "eng_east_13",
-    "name": "Бригада Смирнов",
-    "skills": [
+      "local",
       "connection",
-      "local"
+      "emergency"
     ],
     "transport": "car",
     "shift": {
       "start": "10:00",
-      "end": "19:00",
+      "end": "22:00",
       "start_min": 600,
-      "end_min": 1140
+      "end_min": 1320
     },
     "depot": {
       "lat": 55.7056,
-      "lon": 37.7627,
+      "lon": 37.7667,
       "address": "г. Москва, ул Юных Ленинцев, д 83с 4",
       "district": "east"
     }

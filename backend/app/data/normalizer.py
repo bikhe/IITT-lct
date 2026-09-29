@@ -1,8 +1,10 @@
 from typing import Any
 
-from app.domain.enums import Priority, Skill, Transport, WorkType
+from app.domain.enums import Priority, Transport, WorkType
 from app.domain.models import Location, Order, TechInfo, TimeWindow
 from app.geo.geocoder import HybridGeocoder
+from app.solver.diagnose import plural
+from app.solver.objective import MOSCOW_ZONE, zone_of
 
 
 class OrderNormalizer:
@@ -22,57 +24,29 @@ class OrderNormalizer:
         return "10:00"
 
     def _determine_work_type(self, bk_type: str, hd_type: str) -> WorkType:
-        """Вид работ по классификатору BK (HD — запасной признак для аварий)."""
-        bk_lower = bk_type.lower()
-        if "глобальная проблема" in bk_lower or "авария" in hd_type.lower():
+        """Вид работ. Авария — только по полю HD «Авария» (ответ экспертов 29.09), остальное — по BK.
+
+        «Глобальная проблема» с HD «Информация» — не авария: обычный визит в окно заявки
+        с навыком «Локальные работы» и нормативом локальной заявки.
+        """
+        if "авария" in hd_type.lower():
             return WorkType.EMERGENCY
+        bk_lower = bk_type.lower()
         if "подключение" in bk_lower:
             return WorkType.CONNECTION
         if "дозаказ" in bk_lower:
             return WorkType.ADDON
         return WorkType.LOCAL
 
-    def _determine_skill_and_duration(self, bk_type: str, hd_type: str) -> tuple[Skill, int]:
-        """Навык и чистое время работ по нормативу (90/100/50/40 мин минус 20 мин брони на дорогу)."""
-        kind = self._determine_work_type(bk_type, hd_type)
-        return kind.skill, kind.work_min
+    def _determine_transport_requirement(self, kind: WorkType, hd_type: str) -> Transport | None:
+        """Требование транспорта задаётся правилом по виду работ (в CSV такого поля нет).
 
-    def _determine_priority(self, bk_type: str, hd_type: str) -> Priority:
-        """Аварийные работы и глобальные проблемы имеют наивысший приоритет."""
-        if self._determine_work_type(bk_type, hd_type) == WorkType.EMERGENCY:
-            return Priority.URGENT
-        return Priority.NORMAL
-
-    def _determine_transport_requirement(
-        self, district: str, skill: Skill, priority: Priority, order_id: str
-    ) -> Transport | None:
-        """Синтезирует ограничение на транспорт согласно ТЗ §3.2 для демонстрации констрейнта H3."""
-        distant_districts = {
-            "Бирюлево Восточное",
-            "Бирюлево Западное",
-            "Домодедово",
-            "Кашира",
-            "Ступино",
-            "Братеево",
-        }
-        central_districts = {"Таганский", "Басманный", "Замоскворечье", "Хамовники"}
-
-        # Аварии в удаленные районы строго требуют авто
-        if district in distant_districts and priority == Priority.URGENT:
+        Авария — сварочный аппарат для оптики и расходники, «Работа с кабелем» — бухта кабеля
+        и лестница: такие выезды возможны только на автомобиле. Остальные заявки транспорт
+        не ограничивают.
+        """
+        if kind == WorkType.EMERGENCY or "работа с кабелем" in hd_type.lower():
             return Transport.CAR
-
-        # Часть заявок в центре города детерминированно ограничиваем пешеходом/велосипедом (демонстрация H3)
-        hash_id = int(order_id) if order_id.isdigit() else 0
-        if district in central_districts:
-            if hash_id % 17 == 0:
-                return Transport.FOOT
-            elif hash_id % 9 == 0:
-                return Transport.BIKE
-
-        # Часть заявок с тяжелым подключением требует авто
-        if skill == Skill.CONNECTION and hash_id % 6 == 0:
-            return Transport.CAR
-
         return None
 
     def normalize(self, raw: dict[str, Any]) -> Order:
@@ -86,11 +60,8 @@ class OrderNormalizer:
         start_time = self._parse_time_from_datetime(raw.get("Начало", "10:00"))
         end_time = self._parse_time_from_datetime(raw.get("Окончание", "12:00"))
 
-        skill, duration_min = self._determine_skill_and_duration(bk_type, hd_type)
-        priority = self._determine_priority(bk_type, hd_type)
-        required_transport = self._determine_transport_requirement(
-            district, skill, priority, order_id
-        )
+        kind = self._determine_work_type(bk_type, hd_type)
+        priority = Priority.URGENT if kind == WorkType.EMERGENCY else Priority.NORMAL
 
         lat, lon, _ = self.geocoder.geocode(district, address)
 
@@ -101,14 +72,14 @@ class OrderNormalizer:
 
         return Order(
             id=order_id,
-            skills=[skill],
+            skills=[kind.skill],
             priority=priority,
-            work_type=self._determine_work_type(bk_type, hd_type),
+            work_type=kind,
             bk_type=bk_type or None,
             hd_type=hd_type or None,
             window=TimeWindow(start=start_time, end=end_time),
-            duration_min=duration_min,
-            required_transport=required_transport,
+            duration_min=kind.work_min,
+            required_transport=self._determine_transport_requirement(kind, hd_type),
             location=Location(lat=lat, lon=lon, address=address, district=district),
             tech=TechInfo(product=conn_type, gbit=gbit),
         )
@@ -124,3 +95,55 @@ class OrderNormalizer:
                 orders.append(order)
         return orders
 
+
+def _town_prefix(addresses: list[str], town: str) -> str:
+    """Начало адреса до названия города включительно: «МО, г. Кашира»."""
+    ends = [a.find(town) for a in addresses]
+    if min(ends) < 0:
+        return ""
+    prefixes = {a[: i + len(town)] for a, i in zip(addresses, ends)}
+    return prefixes.pop() if len(prefixes) == 1 else ""
+
+
+def merge_node_accidents(orders: list[Order]) -> list[Order]:
+    """Аварии в одном городе Подмосковья с одинаковым окном — одна авария на узле.
+
+    Эксперты (29.09) разрешили оба варианта: отдельный выезд в каждый дом или одна авария на
+    узле, из-за которой без связи остались несколько домов. В городе области дома подключены
+    к одному узлу, поэтому такие аварии объединяем: один выезд с нормативом аварии, точка —
+    центр домов. ID выезда — первой заявки группы по файлу, остальные ID — в поле covers.
+    Аварии в Москве не объединяются.
+    """
+    groups: dict[tuple[str, int, int], list[Order]] = {}
+    for o in orders:
+        zone = zone_of(o.location.district)
+        if not o.is_emergency or zone == MOSCOW_ZONE:
+            continue
+        groups.setdefault((zone, o.window.start_min, o.window.end_min), []).append(o)
+
+    merged: dict[str, Order] = {}
+    dropped: set[str] = set()
+    for group in groups.values():
+        if len(group) < 2:
+            continue
+        head = group[0]
+        addresses = [o.location.address for o in group]
+        prefix = _town_prefix(addresses, head.location.district)
+        houses = [a[len(prefix):].strip(" ,") if prefix else a for a in addresses]
+        n = len(group)
+        title = f"{prefix} — " if prefix else ""
+        address = (
+            f"{title}авария на узле, {n} {plural(n, 'дом', 'дома', 'домов')}: " + "; ".join(houses)
+        )
+        location = Location(
+            lat=round(sum(o.location.lat for o in group) / n, 5),
+            lon=round(sum(o.location.lon for o in group) / n, 5),
+            address=address,
+            district=head.location.district,
+        )
+        merged[head.id] = head.model_copy(
+            update={"location": location, "covers": [o.id for o in group[1:]]}
+        )
+        dropped.update(o.id for o in group[1:])
+
+    return [merged.get(o.id, o) for o in orders if o.id not in dropped]

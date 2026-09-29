@@ -94,6 +94,10 @@ class Order(BaseModel):
         default=None,
         description="Когда заявка поступила (минуты от полуночи). None — известна с начала дня",
     )
+    covers: list[str] = Field(
+        default_factory=list,
+        description="Авария на узле: ID других заявок из файла, которые закрывает этот выезд",
+    )
     status: OrderStatus = OrderStatus.UNASSIGNED
 
     @model_validator(mode="after")
@@ -246,6 +250,13 @@ class PlanMetrics(BaseModel):
 
     extra_crews_needed: int = Field(
         default=0, description="Сколько ещё бригад нужно, чтобы закрыть неназначенные заявки"
+    )
+
+    avg_load_pct: float | None = Field(
+        default=None, description="Загрузка бригад на линии: (дорога + работа) / длина смен, %"
+    )
+    low_load_crews: int = Field(
+        default=0, description="Бригад на линии с загрузкой ниже 50 % (ориентир организаторов)"
     )
 
     engineer_distances: dict[str, float] = Field(default_factory=dict)  # ID бригады -> км

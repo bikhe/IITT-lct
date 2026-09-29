@@ -96,9 +96,14 @@ class ExplanationGenerator:
                 if order is None:
                     continue
                 if job.status == JobStatus.CANCELLED:
+                    when = (
+                        "во время работ"
+                        if job.end_time_min > job.start_time_min
+                        else "когда бригада уже была в пути"
+                    )
                     explanations[order.id] = (
-                        f"{order.kind.label_ru} #{order.id} отменена клиентом, когда бригада уже была "
-                        f"в пути ({eng.name}). Бригада свободна с {job.end_time} в этой точке."
+                        f"Заявка #{order.id} ({order.kind.label_ru.lower()}) отменена клиентом "
+                        f"{when} ({eng.name}). Бригада свободна с {job.end_time} в этой точке."
                     )
                     continue
                 visit += 1

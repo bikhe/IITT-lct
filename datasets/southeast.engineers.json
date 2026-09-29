@@ -3,19 +3,19 @@
     "id": "eng_southeast_01",
     "name": "Бригада Андреев",
     "skills": [
-      "connection",
-      "local"
+      "local",
+      "connection"
     ],
     "transport": "car",
     "shift": {
       "start": "10:00",
-      "end": "19:00",
+      "end": "22:00",
       "start_min": 600,
-      "end_min": 1140
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.5916,
-      "lon": 37.6669,
+      "lat": 55.5976,
+      "lon": 37.6749,
       "address": "г. Москва, ул Бирюлёвская, д 1с1",
       "district": "southeast"
     }
@@ -24,18 +24,19 @@
     "id": "eng_southeast_02",
     "name": "Бригада Белоновский",
     "skills": [
-      "local"
+      "local",
+      "connection"
     ],
-    "transport": "car",
+    "transport": "transit",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.5946,
-      "lon": 37.6789,
+      "lat": 55.5976,
+      "lon": 37.6749,
       "address": "г. Москва, ул Бирюлёвская, д 1с1",
       "district": "southeast"
     }
@@ -44,18 +45,19 @@
     "id": "eng_southeast_03",
     "name": "Бригада Бузань",
     "skills": [
+      "local",
       "connection"
     ],
-    "transport": "car",
+    "transport": "foot",
     "shift": {
-      "start": "13:00",
+      "start": "10:00",
       "end": "22:00",
-      "start_min": 780,
+      "start_min": 600,
       "end_min": 1320
     },
     "depot": {
       "lat": 55.5976,
-      "lon": 37.6709,
+      "lon": 37.6749,
       "address": "г. Москва, ул Бирюлёвская, д 1с1",
       "district": "southeast"
     }
@@ -64,19 +66,20 @@
     "id": "eng_southeast_04",
     "name": "Бригада Горбанев",
     "skills": [
-      "emergency",
-      "local"
+      "local",
+      "connection",
+      "emergency"
     ],
-    "transport": "transit",
+    "transport": "car",
     "shift": {
       "start": "10:00",
-      "end": "19:00",
+      "end": "22:00",
       "start_min": 600,
-      "end_min": 1140
+      "end_min": 1320
     },
     "depot": {
-      "lat": 55.6006,
-      "lon": 37.6829,
+      "lat": 55.5976,
+      "lon": 37.6749,
       "address": "г. Москва, ул Бирюлёвская, д 1с1",
       "district": "southeast"
     }
@@ -85,19 +88,17 @@
     "id": "eng_southeast_05",
     "name": "Бригада Демин",
     "skills": [
-      "local",
-      "connection",
-      "emergency"
+      "local"
     ],
-    "transport": "car",
+    "transport": "bike",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
     },
     "depot": {
-      "lat": 55.6036,
+      "lat": 55.5976,
       "lon": 37.6749,
       "address": "г. Москва, ул Бирюлёвская, д 1с1",
       "district": "southeast"
@@ -107,28 +108,7 @@
     "id": "eng_southeast_06",
     "name": "Бригада Каушнян",
     "skills": [
-      "connection",
-      "emergency"
-    ],
-    "transport": "foot",
-    "shift": {
-      "start": "13:00",
-      "end": "22:00",
-      "start_min": 780,
-      "end_min": 1320
-    },
-    "depot": {
-      "lat": 55.5916,
-      "lon": 37.6669,
-      "address": "г. Москва, ул Бирюлёвская, д 1с1",
-      "district": "southeast"
-    }
-  },
-  {
-    "id": "eng_southeast_07",
-    "name": "Бригада Козырь",
-    "skills": [
-      "local"
+      "connection"
     ],
     "transport": "car",
     "shift": {
@@ -138,29 +118,51 @@
       "end_min": 1140
     },
     "depot": {
-      "lat": 55.5946,
-      "lon": 37.6789,
-      "address": "г. Москва, ул Бирюлёвская, д 1с1",
-      "district": "southeast"
+      "lat": 55.4431,
+      "lon": 37.7478,
+      "address": "Дом исполнителя, г. Домодедово",
+      "district": "Домодедово"
+    }
+  },
+  {
+    "id": "eng_southeast_07",
+    "name": "Бригада Козырь",
+    "skills": [
+      "local",
+      "connection",
+      "emergency"
+    ],
+    "transport": "car",
+    "shift": {
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
+    },
+    "depot": {
+      "lat": 54.8384,
+      "lon": 38.1601,
+      "address": "Дом исполнителя, г. Кашира",
+      "district": "Кашира"
     }
   },
   {
     "id": "eng_southeast_08",
     "name": "Бригада Макаров",
     "skills": [
-      "connection",
-      "local"
+      "local",
+      "connection"
     ],
-    "transport": "bike",
+    "transport": "foot",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "22:00",
+      "start_min": 600,
+      "end_min": 1320
     },
     "depot": {
       "lat": 55.5976,
-      "lon": 37.6709,
+      "lon": 37.6749,
       "address": "г. Москва, ул Бирюлёвская, д 1с1",
       "district": "southeast"
     }
@@ -175,16 +177,16 @@
     ],
     "transport": "car",
     "shift": {
-      "start": "13:00",
+      "start": "10:00",
       "end": "22:00",
-      "start_min": 780,
+      "start_min": 600,
       "end_min": 1320
     },
     "depot": {
-      "lat": 55.6006,
-      "lon": 37.6829,
-      "address": "г. Москва, ул Бирюлёвская, д 1с1",
-      "district": "southeast"
+      "lat": 55.4431,
+      "lon": 37.7478,
+      "address": "Дом исполнителя, г. Домодедово",
+      "district": "Домодедово"
     }
   },
   {
@@ -192,10 +194,9 @@
     "name": "Бригада Рыбин",
     "skills": [
       "local",
-      "connection",
-      "emergency"
+      "connection"
     ],
-    "transport": "car",
+    "transport": "transit",
     "shift": {
       "start": "10:00",
       "end": "19:00",
@@ -203,10 +204,10 @@
       "end_min": 1140
     },
     "depot": {
-      "lat": 54.8384,
-      "lon": 38.1601,
-      "address": "Домашняя база исполнителя (г. Кашира)",
-      "district": "Кашира"
+      "lat": 55.5976,
+      "lon": 37.6749,
+      "address": "г. Москва, ул Бирюлёвская, д 1с1",
+      "district": "southeast"
     }
   },
   {
@@ -219,15 +220,15 @@
     ],
     "transport": "car",
     "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
+      "start": "10:00",
+      "end": "19:00",
+      "start_min": 600,
+      "end_min": 1140
     },
     "depot": {
       "lat": 54.8384,
       "lon": 38.1601,
-      "address": "Домашняя база исполнителя (г. Кашира)",
+      "address": "Дом исполнителя, г. Кашира",
       "district": "Кашира"
     }
   },
@@ -235,33 +236,9 @@
     "id": "eng_southeast_12",
     "name": "Бригада Царьков",
     "skills": [
-      "local",
-      "connection",
-      "emergency"
+      "connection"
     ],
-    "transport": "car",
-    "shift": {
-      "start": "13:00",
-      "end": "22:00",
-      "start_min": 780,
-      "end_min": 1320
-    },
-    "depot": {
-      "lat": 54.8875,
-      "lon": 38.0772,
-      "address": "Домашняя база исполнителя (г. Ступино)",
-      "district": "Ступино"
-    }
-  },
-  {
-    "id": "eng_southeast_13",
-    "name": "Бригада Смирнов",
-    "skills": [
-      "local",
-      "connection",
-      "emergency"
-    ],
-    "transport": "car",
+    "transport": "bike",
     "shift": {
       "start": "10:00",
       "end": "19:00",
@@ -269,32 +246,10 @@
       "end_min": 1140
     },
     "depot": {
-      "lat": 55.4431,
-      "lon": 37.7478,
-      "address": "Домашняя база исполнителя (г. Домодедово)",
-      "district": "Домодедово"
-    }
-  },
-  {
-    "id": "eng_southeast_14",
-    "name": "Бригада Васильев",
-    "skills": [
-      "local",
-      "connection",
-      "emergency"
-    ],
-    "transport": "car",
-    "shift": {
-      "start": "11:00",
-      "end": "20:00",
-      "start_min": 660,
-      "end_min": 1200
-    },
-    "depot": {
-      "lat": 55.4431,
-      "lon": 37.7478,
-      "address": "Домашняя база исполнителя (г. Домодедово)",
-      "district": "Домодедово"
+      "lat": 55.5976,
+      "lon": 37.6749,
+      "address": "г. Москва, ул Бирюлёвская, д 1с1",
+      "district": "southeast"
     }
   }
 ]

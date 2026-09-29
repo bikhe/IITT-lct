@@ -9,7 +9,8 @@ def remove_routes(fleet: Fleet, *, crew_penalty: float = CREW_PENALTY) -> int:
     """Пробует освободить бригады по одной (от самых лёгких маршрутов). Возвращает, сколько освобождено.
 
     Ход принимается, только если все заявки маршрута удалось вставить в маршруты других уже
-    задействованных бригад — так число бригад строго уменьшается, а назначенные не теряются.
+    задействованных бригад и ни одна авария не стала начинаться позже SLA — так число бригад
+    строго уменьшается, а назначенные заявки и реакция на аварии не страдают.
     """
     ev = fleet.evaluator
     removed = 0
@@ -22,12 +23,13 @@ def remove_routes(fleet: Fleet, *, crew_penalty: float = CREW_PENALTY) -> int:
         if len(st) == 0:
             continue
         snap = fleet.snapshot()
+        breaches = fleet.breaches()
         pool = list(st.orders)
         fleet.states[eid] = ev.empty(st.engineer, st.start)
         left = insert_pool(
             fleet, pool, crew_penalty=crew_penalty, allow_activation=False, exclude={eid}
         )
-        if left:
+        if left or fleet.breaches() > breaches:
             fleet.restore(snap)
         else:
             removed += 1

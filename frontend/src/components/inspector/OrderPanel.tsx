@@ -66,6 +66,11 @@ export const OrderPanel = ({
             <span className="text-ink-3"> · {order.location.district}</span>
           </span>
         </p>
+        {!!order.covers?.length && (
+          <p className="mt-1 text-caption text-ink-3">
+            Один выезд закрывает и заявки {order.covers.map((id) => `#${id}`).join(', ')}
+          </p>
+        )}
       </div>
 
       {planned && st?.kind === 'assigned' && <Assignment d={d} order={order} st={st} color={colors[st.engineerId]} />}

@@ -5,7 +5,7 @@ import math
 from app.domain.models import Order
 from app.solver.evaluator import Insertion
 from app.solver.fleet import Fleet
-from app.solver.objective import CREW_PENALTY
+from app.solver.objective import CREW_PENALTY, activation_bias
 
 SINGLE_OPTION_REGRET = 1e5  # заявку с единственным вариантом вставляем раньше прочих того же приоритета
 
@@ -30,7 +30,7 @@ def _option(
     if not fleet.is_active(eid):
         if not allow_activation:
             return None
-        activation = crew_penalty
+        activation = crew_penalty + activation_bias(state.engineer)
     best = ev.best_insertion(state, order, with_shift=stability > 0)
     if best is None:
         return None
@@ -64,19 +64,20 @@ def insert_pool(
     options: dict[str, dict[str, tuple[float, Insertion] | None]] = {
         oid: {eid: _option(fleet, o, eid, **kw) for eid in eids} for oid, o in remaining.items()
     }
+    top = {oid: _top2(opts) for oid, opts in options.items()}
 
+    ids = sorted(remaining)
     while remaining:
         pick: tuple[tuple, Order, str] | None = None
-        for oid in sorted(remaining):
+        for oid in ids:
             order = remaining[oid]
-            costs = sorted((v[0], eid) for eid, v in options[oid].items() if v is not None)
-            if not costs:
+            first, second = top[oid]
+            if first is None:
                 continue
-            c1 = costs[0][0]
-            regret = costs[1][0] - c1 if len(costs) > 1 else SINGLE_OPTION_REGRET
+            regret = second[0] - first[0] if second is not None else SINGLE_OPTION_REGRET
             key = (order.kind.priority_tier, -round(regret, 6), order.window.start_min, oid)
             if pick is None or key < pick[0]:
-                pick = (key, order, costs[0][1])
+                pick = (key, order, first[1])
         if pick is None:
             break
 
@@ -86,7 +87,37 @@ def insert_pool(
         fleet.states[eid] = fleet.evaluator.insert(fleet.states[eid], order, opt[1].pos)
         del remaining[order.id]
         del options[order.id]
+        del top[order.id]
+        ids.remove(order.id)
         for oid, o in remaining.items():
-            options[oid][eid] = _option(fleet, o, eid, **kw)
+            v = _option(fleet, o, eid, **kw)
+            options[oid][eid] = v
+            first, second = top[oid]
+            if (first is not None and first[1] == eid) or (second is not None and second[1] == eid):
+                top[oid] = _top2(options[oid])  # вариант этой бригады был среди двух лучших
+            elif v is not None:
+                item = (v[0], eid)
+                if first is None or item < first:
+                    top[oid] = (item, first)
+                elif second is None or item < second:
+                    top[oid] = (first, item)
 
     return [o for o in pool if o.id in remaining]
+
+
+Top2 = tuple[tuple[float, str] | None, tuple[float, str] | None]
+
+
+def _top2(opts: dict[str, tuple[float, Insertion] | None]) -> Top2:
+    """Два лучших варианта по (цена, бригада) — как первые два элемента sorted()."""
+    first: tuple[float, str] | None = None
+    second: tuple[float, str] | None = None
+    for eid, v in opts.items():
+        if v is None:
+            continue
+        item = (v[0], eid)
+        if first is None or item < first:
+            first, second = item, first
+        elif second is None or item < second:
+            second = item
+    return first, second

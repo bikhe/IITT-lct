@@ -43,6 +43,18 @@ def calculate_plan_metrics(
         if r.engineer_id in eng_map and eng_map[r.engineer_id].transport == Transport.CAR
     )
 
+    # загрузка = (дорога + работа) / смена по бригадам на линии (организаторы: < 50 % — лишний человек)
+    busy_min = shift_min = low_load = 0
+    for r in routes:
+        eng = eng_map.get(r.engineer_id)
+        if eng is None or not any(j.status != JobStatus.CANCELLED for j in r.jobs):
+            continue
+        busy = r.total_work_time_min + r.total_travel_time_min
+        length = max(1, eng.shift.end_min - eng.shift.start_min)
+        busy_min += busy
+        shift_min += length
+        low_load += 1 if busy < 0.5 * length else 0
+
     return PlanMetrics(
         total_orders=total_orders,
         assigned_orders=assigned_orders,
@@ -60,6 +72,8 @@ def calculate_plan_metrics(
         emergency_avg_reaction_min=round(sum(reactions) / len(reactions), 1) if reactions else None,
         emergency_max_reaction_min=max(reactions) if reactions else None,
         extra_crews_needed=extra_crews_needed,
+        avg_load_pct=round(100.0 * busy_min / shift_min, 1) if shift_min else None,
+        low_load_crews=low_load,
         engineer_distances={r.engineer_id: r.total_distance_km for r in routes},
         engineer_order_counts={
             r.engineer_id: sum(1 for j in r.jobs if j.status != JobStatus.CANCELLED) for r in routes
@@ -91,6 +105,8 @@ def compare_plans(optimized_plan: Plan, baseline_plan: Plan) -> dict[str, Any]:
             "emergency_avg_reaction_min": m.emergency_avg_reaction_min,
             "emergency_within_sla": m.emergency_within_sla,
             "emergency_orders": m.emergency_orders,
+            "avg_load_pct": m.avg_load_pct,
+            "low_load_crews": m.low_load_crews,
         }
 
     return {
