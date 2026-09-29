@@ -7,6 +7,7 @@ cd "$(dirname "$0")"
 PORT_ARG="${1:-${PORT:-}}"
 VENV=backend/.venv
 export PYTHONIOENCODING=utf-8
+export PYTHONUTF8=1
 
 fail() {
   printf '\nОШИБКА: %s\n' "$1" >&2

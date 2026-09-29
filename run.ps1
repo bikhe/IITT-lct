@@ -8,6 +8,7 @@ $Backend = Join-Path $Root "backend"
 $Venv = Join-Path $Backend ".venv"
 $VenvPy = Join-Path $Venv "Scripts\python.exe"
 $env:PYTHONIOENCODING = "utf-8"
+$env:PYTHONUTF8 = "1"
 
 function Fail([string]$Message) {
     Write-Host ""
@@ -49,7 +50,9 @@ if (-not (Test-VenvReady)) {
     $exe = $python[0]
     $rest = @($python | Select-Object -Skip 1)
     & $exe @rest -m venv $Venv
-    if ($LASTEXITCODE -ne 0) { Fail "Не удалось создать окружение Python." }
+    if ($LASTEXITCODE -ne 0) {
+        Fail "Не удалось создать окружение Python. Если путь к папке очень длинный, переместите проект ближе к корню диска (например, C:\LCT-2026)."
+    }
 }
 
 # 2. Зависимости: при первом запуске и после изменения backend\pyproject.toml

@@ -75,7 +75,7 @@ def main() -> None:
     if port is None:
         busy = args.port if args.port is not None else f"{DEFAULT_PORT}–{DEFAULT_PORT + 19}"
         print(
-            f"Порт {busy} занят. Укажите другой, например: run.bat 8080 или ./run.sh 8080",
+            f"Порт {busy} занят. Укажите другой, например: .\\run.bat 8088 или ./run.sh 8088",
             file=sys.stderr,
         )
         sys.exit(1)
